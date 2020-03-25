@@ -1,0 +1,118 @@
+{
+  "products": [
+    {
+      "id": "d690ec50-59b0-4bfa-b1ba-b807d767b79f",
+      "name": "Iphone X",
+      "description": "New Iphone X has a lot of features",
+      "manufacturer": "Apple Inc",
+      "price": "50000",
+      "qty": "50"
+    },
+    {
+      "id": "d843c66c-c08a-4775-832c-45550b959d23",
+      "name": "Samsung S10",
+      "description": "New Samsung S10, full touch screen",
+      "manufacturer": "Samsung",
+      "price": "20000",
+      "qty": "56"
+    },
+    {
+      "id": "40c6ecc1-6122-417e-abc6-06415648fc5c",
+      "name": "HP G500 Laptop",
+      "description": "New HP Laptop with core i5 processor and touch screen",
+      "manufacturer": "HP",
+      "price": "34000",
+      "qty": "23"
+    },
+    {
+      "id": "40c6ecc1-6122-56d1-abc6-06415648fc5c",
+      "name": "Philips Smart TV",
+      "description": "A smart TV with pre-loaded online streaming Apps",
+      "manufacturer": "Philips",
+      "price": "85000",
+      "qty": "18"
+    },
+    {
+      "id": "80d30e72-aee6-4407-abbb-2a1e08171b7e",
+      "name": "Pencil",
+      "description": "Used to write Notes",
+      "manufacturer": "Natraj",
+      "price": "123000",
+      "qty": "12"
+    }
+  ],
+  "users": [
+    {
+      "id": "d843c66c-c08a-4775-421r-45550b959d23",
+      "mailid": "md",
+      "password": "md",
+      "firstName": "aadil",
+      "lastName": "hussain",
+      "location": "kolkata",
+      "mobile": "912327675"
+    },
+    {
+      "id": "f78dddc0-d2bb-4fee-bf72-234cf724974f",
+      "mailid": "mdaadilhus9@gmail.com",
+      "password": "hello",
+      "firstname": "Md",
+      "lastname": "Hussain",
+      "location": "usa",
+      "mobile": 912343212
+    },
+    {
+      "id": "5d6e7d04-d5d0-4910-9f47-8f7f7981653d",
+      "mailid": "md@gmail.com",
+      "password": "aadil",
+      "firstname": "Md",
+      "lastname": "Hussain",
+      "location": "scan",
+      "mobile": 123321234
+    },
+    {
+      "id": "0eab3a19-b500-49af-a8ca-2e228985a230",
+      "mailid": "hus9@gmail.com",
+      "password": "13233445",
+      "firstname": "Md",
+      "lastname": "Hussain",
+      "location": "kol",
+      "mobile": 3455432345
+    },
+    {
+      "id": "324b2ed2-c019-4d29-b3dc-9476958ed02a",
+      "mailid": "md9@gmail.com",
+      "password": "5345454",
+      "firstname": "Md",
+      "lastname": "Hussain",
+      "location": "usa",
+      "mobile": 121212121
+    },
+    {
+      "id": "c708be8c-d0ea-48bc-a794-966013e0294e",
+      "mailid": "mdaadilhus9@gmail.com",
+      "password": "425464634",
+      "firstname": "Md",
+      "lastname": "Hussain",
+      "location": "fhdfhdfhdf",
+      "mobile": 797967968968
+    },
+    {
+      "id": "c1694284-40c1-455a-8429-0ec2104b0778",
+      "mailid": "mdaadilhus9@gmail.com",
+      "password": "12121212",
+      "firstname": "Md",
+      "lastname": "Hussain",
+      "location": "mumbai",
+      "mobile": 545542332
+    },
+    {
+      "id": "c1f9b50b-8d33-49dd-9a49-ba4a6c1e9ea7",
+      "mailid": "mdaadilhus9@gmail.com",
+      "password": "5656456464",
+      "firstname": "Md",
+      "lastname": "Hussain",
+      "location": "goa",
+      "mobile": 12121212121
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+
+<div class='panel panel-primary' style="margin-top: 20px">
+  <h2>{{title}}</h2>
+  <label>Search filter:</label>
+  <input type='text' [(ngModel)]='nameFilter'/> <br><br>
+  <br>
+
+
+<div class='panel-body'>
+  <table border="5"  class='table table-striped'>
+  <thead>
+      <tr>
+    
+          <th>Product Name</th>
+          <th>Description</th>
+          <th>Manufacturer</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>DELETE</th>  
+          <th>EDIT</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let product of products | searchFilter: nameFilter' >
+      
+      <td><a (click) = "onClick(product.id)" class="pointerCursor">{{product.name}}</a></td>
+      <td>{{product.description}}</td>
+      <td>{{product.manufacturer}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.qty}}</td> 
+      <td><button (click)="deleteProduct(product.id)" class="btn btn-xs btn-danger">Delete</button></td>
+      <td><button type="button" class="btn btn-warning" (click)="editProduct('update', product.id)">Edit</button></td>
+    </tr> 
+  </tbody>
+</table>
+</div>
+<br> <br>
+</div>
+<div>
+  
+    <product-add
+    [product]="selectedProduct"
+    (finish)="handleFinish($event)"
+    ></product-add>
+</div>
+
+
+  
+
+
