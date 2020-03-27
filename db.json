@@ -39,6 +39,14 @@
       "manufacturer": "Natraj",
       "price": "123000",
       "qty": "12"
+    },
+    {
+      "id": "df715700-346e-4841-8000-4f4426a7bd1c",
+      "name": "Android",
+      "description": "It's a phone",
+      "manufacturer": "Xiomi",
+      "price": "10000",
+      "qty": "10"
     }
   ],
   "users": [

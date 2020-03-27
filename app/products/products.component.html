@@ -29,10 +29,80 @@
       <td>{{product.price}}</td>
       <td>{{product.qty}}</td> 
       <td><button (click)="deleteProduct(product.id)" class="btn btn-xs btn-danger">Delete</button></td>
-      <td><button type="button" class="btn btn-warning" (click)="editProduct('update', product.id)">Edit</button></td>
+      <td><button type="button" class="btn btn-warning" (click)="showedit(product.id)">Edit</button></td>
     </tr> 
   </tbody>
 </table>
+
+<div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Edit Product</h4>
+      </div>
+      <div class="modal-body">
+                <form [formGroup]="editForm" #formRef="ngForm" (ngSubmit)="onSubmit()">
+                      <div class="row">
+                         <div class="col-sm-6">
+                            <div class="form-group">
+                                  <label>Product Name</label>
+                                  <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                                  <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                        <div *ngIf="f.name.errors.required">Field is required</div>
+                                  </div>
+                               </div>
+                         </div> 
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                  <label>Product description</label>
+                                  <input type="text" formControlName="desc" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.desc.errors }" />
+                                  <div *ngIf="submitted && f.desc.errors" class="invalid-feedback">
+                                        <div *ngIf="f.desc.errors.required">Field is required</div>
+                                  </div>
+                               </div>
+                         </div> 
+                         <div class="col-sm-6">
+                            <div class="form-group">
+                                  <label>Manufacturer</label>
+                                  <input type="text" formControlName="manuf" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.manuf.errors }" />
+                                  <div *ngIf="submitted && f.manuf.errors" class="invalid-feedback">
+                                        <div *ngIf="f.manuf.errors.required">Field is required</div>
+                                  </div>
+                               </div>
+                         </div> 
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                  <label>Price</label>
+                                  <input type="text" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                                  <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                        <div *ngIf="f.price.errors.required">Field is required</div>
+                                  </div>
+                               </div>
+                         </div> 
+                         
+                         <div class="col-sm-6">
+                            <div class="form-group">
+                                  <label>Quantity</label>
+                                  <input type="text" formControlName="qty" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.qty.errors }" />
+                                  <div *ngIf="submitted && f.qty.errors" class="invalid-feedback">
+                                        <div *ngIf="f.qty.errors.required">Field is required</div>
+                                  </div>
+                               </div>
+                         </div> 
+             </div>
+             <button type="submit"  class="btn btn-primary" [disabled]="formRef.invalid" >Submit</button>
+                </form>
+     
+    
+ </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hide()">Close</button>
+      
+      </div>
+    </div>
+  </div>
+  </div>
+
 </div>
 <br> <br>
 </div>

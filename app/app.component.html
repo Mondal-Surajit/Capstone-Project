@@ -3,8 +3,8 @@
   <a style="padding-right:20px" routerLink="products" routerLinkActive="active">Products Inventory</a>
   <a routerLink="chart" routerLinkActive="active">Top Chart</a>
   <a style="padding-left:20px" *ngIf=!isLoggedIn() style="float:right" routerLink="login" routerLinkActive="active">Login</a>
-  <a *ngIf=isLoggedIn() style="float:right" routerLink="logout"  (click)="changeToLoginRoute()">Logout</a>
-  <a *ngIf=isLoggedIn() style="padding-left:20px" routerLink="profile"  >Profile</a>  
+  <a *ngIf="isLoggedIn()" style="float:right" routerLink="logout"  (click)="changeToLoginRoute()">Logout</a>
+  <a *ngIf="isLoggedIn()" style="padding-left:20px" routerLink="profile"  >Profile</a>  
  
 </nav>
 <router-outlet></router-outlet>

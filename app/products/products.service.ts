@@ -23,6 +23,10 @@ export class ProductsService {
     return this._http.get(this.url);
   }
 
+  getProduct(id):any {
+    let edittedURL = `${this.url}/${id}`;
+    return this._http.get(edittedURL,this.httpOptions)
+  }
 
   addProduct(formData) {  
 
@@ -34,7 +38,7 @@ export class ProductsService {
 
   }
 
-  editProduct(id, product) {
+  editProduct(product , id) {
     
     let edittedURL = `${this.url}/${id}`;
         return this._http.put(edittedURL, product, this.httpOptions);
