@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import {  Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as uuid from 'uuid';
-
+import { map } from 'rxjs/operators';
 
 
 
 
 @Injectable()
 export class RegloginService {
-  private url = "http://localhost:3000/users";
+  private url = "http://localhost:3000/users/";
     private httpOptions = {
         headers: new HttpHeaders({
           'Content-Type':  'application/json'
@@ -67,7 +67,15 @@ export class RegloginService {
 
   }
 
-  
+  getOne(id) : Observable<any> {
+
+    return this._http.get(this.url+id).pipe(map(res =>
+      {
+        return res;  
+           
+      }
+      ))
+  } 
 
   
 

@@ -20,6 +20,7 @@ const prodRoutes: Routes = [
       canActivate: [ProductDetailGaurdService] },
     ] 
   }
+  
 ];
 
 @NgModule({

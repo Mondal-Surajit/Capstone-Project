@@ -41,11 +41,11 @@
       "qty": "12"
     },
     {
-      "id": "df715700-346e-4841-8000-4f4426a7bd1c",
-      "name": "Android",
-      "description": "It's a phone",
+      "id": "a5c90c6d-8252-41f4-83d6-e1cf606c6d8d",
+      "name": "Redmi",
+      "description": "It's a smart phone",
       "manufacturer": "Xiomi",
-      "price": "10000",
+      "price": "15000",
       "qty": "10"
     }
   ],

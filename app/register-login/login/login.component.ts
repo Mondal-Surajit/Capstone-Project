@@ -65,6 +65,6 @@ export class LoginComponent implements OnInit {
     this.location.back();
     this.loginForm.reset();
     this.submitted=false;
-  }
+  } 
 
 }

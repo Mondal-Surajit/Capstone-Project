@@ -1,1 +1,23 @@
-<p>product-detail works!</p>
+<table border="5"  class='table table-striped'>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Manufacturer</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{data?.name}}</td>
+        <td>{{data?.description}}</td>
+        <td>{{data?.manufacturer}}</td>
+        <td>{{data?.price}}</td>
+        <td>{{data?.qty}}</td> 
+      </tr> 
+      
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-success" (click)="goBack()">Go Back to List</button>

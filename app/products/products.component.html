@@ -18,6 +18,8 @@
           <th>Quantity</th>
           <th>DELETE</th>  
           <th>EDIT</th>
+          <th>View Detail</th>
+          
       </tr>
   </thead>
   <tbody>
@@ -30,6 +32,7 @@
       <td>{{product.qty}}</td> 
       <td><button (click)="deleteProduct(product.id)" class="btn btn-xs btn-danger">Delete</button></td>
       <td><button type="button" class="btn btn-warning" (click)="showedit(product.id)">Edit</button></td>
+      <td><a class ="btn btn-sm text-white btn-primary" [routerLink]="[product.id]">View Detail</a></td>
     </tr> 
   </tbody>
 </table>

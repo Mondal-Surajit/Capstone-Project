@@ -3,13 +3,12 @@ import {  Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as uuid from 'uuid';
 import { IProduct } from './product.model';
-
-
+import { map } from 'rxjs/operators';
 
 
 @Injectable()
 export class ProductsService {
-  private url = "http://localhost:3000/products";
+  private url = "http://localhost:3000/products/";
     private httpOptions = {
         headers: new HttpHeaders({
           'Content-Type':  'application/json'
@@ -27,6 +26,16 @@ export class ProductsService {
     let edittedURL = `${this.url}/${id}`;
     return this._http.get(edittedURL,this.httpOptions)
   }
+
+  getOne(id) : Observable<any> {
+
+    return this._http.get(this.url+id).pipe(map(res =>
+      {
+        return res;  
+           
+      }
+      ))
+  } 
 
   addProduct(formData) {  
 

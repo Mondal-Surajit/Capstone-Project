@@ -9,6 +9,7 @@ export class ProfileComponent implements OnInit {
   showModal:boolean = false;
   constructor(private _service:RegloginService) { }
   @Input() show:boolean;
+  
   ngOnInit(): void {
 console.log("In view Profile")
   }
