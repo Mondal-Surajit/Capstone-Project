@@ -13,12 +13,19 @@ export class ProductsComponent implements OnInit {
   nameFilter: string = '';
   products: IProduct[];
   productOpen = true;
-  selectedProduct: undefined;
+  selectedProduct: undefined; 
   showModal: boolean;
   editForm: FormGroup;
   submitted = false;
   id:any;
-  editProd:IProduct;
+  editProd:IProduct = {
+    id:null,
+    name: null,
+    description: null,
+    manufacturer: null,
+    price:null,
+    qty:null
+  };
   constructor(private productsService: ProductsService, private _fb: FormBuilder) { }
 
   ngOnInit() {

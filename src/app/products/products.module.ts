@@ -16,7 +16,7 @@ import { ProductDetailGaurdService } from './product-detail/productdetail-gaurd.
     imports: [HttpClientModule,
         SharedModule,
         ProductsRoutingModule,
-        ReactiveFormsModule,
+        ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
         BrowserAnimationsModule
     ],
     providers :[ProductsService,AddProductGuardService, ProductDetailGaurdService ],
