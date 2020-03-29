@@ -1,25 +1,27 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {RegloginService} from '../reglogin.service'
+import {User} from '../_models/user'
 
 @Component({
   selector: 'app-profile-detail',
   templateUrl: './profile.component.html' ,
 })
 export class ProfileComponent implements OnInit {
-  showModal:boolean = false;
-  constructor(private _service:RegloginService) { }
-  @Input() show:boolean;
   
+  constructor(private _service:RegloginService) { 
+    this.user=this._service.getProfile();
+    console.log(this.user)
+  }
+
+  user:User;
+  
+  show:boolean;
   ngOnInit(): void {
-console.log("In view Profile")
-  }
-  hide()
-  {
-    this.showModal = false;
   }
 
-  
-
-  
+  showprofile(){
+    this.show=true;
+    console.log(this.user);
+}
 
 }

@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   showModal: boolean;
   
-  constructor(private _fb: FormBuilder, private router: Router, private _service:RegloginService) { }
+  constructor(private _fb: FormBuilder, private router: Router, private _service:RegloginService,private _router:Router) { }
 
  
   //Bootstrap Modal Close event
@@ -71,6 +71,7 @@ export class RegisterComponent implements OnInit {
         
       }
       this.registerForm.reset()
+      this._router.navigate(['login']);
       this.submitted=false;
       
     }

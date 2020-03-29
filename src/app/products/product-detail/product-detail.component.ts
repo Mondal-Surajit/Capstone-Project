@@ -24,6 +24,7 @@ export class ProductDetailComponent implements OnInit {
     this.id = this._route.snapshot.params['id']; 
     //this.product = this.productsService.getProduct(id);
     this.getOne();
+    
   } 
   
   getOne() {
@@ -39,3 +40,4 @@ export class ProductDetailComponent implements OnInit {
 }
 
 }
+ 

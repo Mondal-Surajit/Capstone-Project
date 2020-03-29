@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable , OnInit} from '@angular/core';
 import {  Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import * as uuid from 'uuid';
 import { map } from 'rxjs/operators';
+import { User } from './_models/user';
 
 
 
@@ -15,33 +16,58 @@ export class RegloginService {
           'Content-Type':  'application/json'
         })
     };
+users:User[];
+user:User;
+nam:string;
+pswd:string;
 
-    constructor (private _http: HttpClient) { }
+
+    ngOnInit() {
+  }
+
+
+    constructor (private _http: HttpClient) { 
+
+    }
+
+ 
+
+    getProfile(): User{
+      return this.user;
+      
+    }
+
+    getProfiles ():Observable<any> 
+    {
+       return this._http.get('http://localhost:3000/users/').pipe(map(res =>
+      {
+        return res;  
+      }
+      ))
+    }
 
     login() {
       localStorage.setItem('routeguard-app-login', "1");
       
     }
-
+  
     logout() {
       localStorage.removeItem('routeguard-app-login');
      
     }
-  
+   
     isLoggedIn() {
-      if (localStorage.getItem('routeguard-app-login') != null)
-     
-        return true;
+      if (localStorage.getItem('routeguard-app-login') == '1')
+     return true;
       else
         return false;
     }
+  
 
-   
-    
- 
-    ifexists(username:string,password:string):boolean{
-      let url='http://localhost:3000/users?mailid='
-     if( this._http.get(`${url}+${username}+'&password='+${password}`))
+    ifexists(userdata:User,username:string,password:string):boolean{
+      this.user=userdata;
+      
+     if(this.user.mailid==username&&this.user.password==password  )
      {
       this.login();
       return true;
@@ -52,9 +78,9 @@ export class RegloginService {
      {
        return false;
        
-
      }
 }
+ 
   
    adduser(formData) {  
 
@@ -67,15 +93,7 @@ export class RegloginService {
 
   }
 
-  getOne(id) : Observable<any> {
-
-    return this._http.get(this.url+id).pipe(map(res =>
-      {
-        return res;  
-           
-      }
-      ))
-  } 
+  
 
   
 

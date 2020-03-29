@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
+import { first, timeout } from 'rxjs/operators';
 import { RegloginService } from '../reglogin.service';
 import { Observable } from 'rxjs';
 import { Location } from "@angular/common";
+import { User } from '../_models/user';
 
 
 
@@ -19,15 +20,17 @@ export class LoginComponent implements OnInit {
   returnUrl: string;
     exists:boolean;
     showModal: boolean;
-
+    users:User[];
   constructor(
       private formBuilder: FormBuilder,
       private router: Router,
       private _service:RegloginService,
-      private location: Location
+      private location: Location,
+      private _router:Router
   ) {
     // if (this.authenticationService.currentUserValue) { 
     //     this.router.navigate(['/']);
+
     }
      
   //Bootstrap Modal Close event
@@ -41,14 +44,25 @@ export class LoginComponent implements OnInit {
           username: ['', Validators.required],
           password: ['', Validators.required]
       });
+      this._service.getProfiles().subscribe(users => {
+        this.users = users;
+        
+    } )
+      
       
   }
+
+ 
+
   
-  isLoggedIn() {
+
+  isLoggedIn()
+  {
     
     return this._service.isLoggedIn();
     
   }
+ 
 
   // convenience getter for easy access to form fields
   get f() { return this.loginForm.controls; }
@@ -60,11 +74,29 @@ export class LoginComponent implements OnInit {
       if (this.loginForm.invalid) {
           return;
       }
-    this.exists =this._service.ifexists(this.f.username.value, this.f.password.value)
+     
+    
+   let filterResult: User[]= this.users.filter(u => 
+    u.mailid == this.f.username.value && u.password == this.f.password.value);
+    let user= filterResult[0];
+    if(user==undefined)
+    {window.alert("LOGIN FAILED !! Incorrect ID / Password");
+    this.submitted=false;
+    this.loginForm.reset();
+      return;
+  }
+    console.log(user)
+    let val=this._service.ifexists(user,this.f.username.value,this.f.password.value)
+       this.showModal=val;
+    if(val)
+    {
     this.showModal = this.exists;
     this.location.back();
     this.loginForm.reset();
     this.submitted=false;
-  } 
+    console.log('LOGIN SUCESSFUL')
+    }
+  }
+  
 
 }

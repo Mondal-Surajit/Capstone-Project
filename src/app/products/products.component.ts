@@ -18,6 +18,7 @@ export class ProductsComponent implements OnInit {
   editForm: FormGroup;
   submitted = false;
   id:any;
+  editProd:IProduct;
   constructor(private productsService: ProductsService, private _fb: FormBuilder) { }
 
   ngOnInit() {
@@ -52,7 +53,7 @@ export class ProductsComponent implements OnInit {
       this.showModal = true;
       this.id=id;
       console.log(this.productsService.getProduct(id));
-      
+      this.productsService.getOne(this.id).subscribe(editProd => {this.editProd = editProd});
     }
 
     handleFinish(event: { prod: any; }) {
@@ -99,6 +100,7 @@ onSubmit()
           "price":this.editForm.get('price').value,
           "qty":this.editForm.get('qty').value,
           }
+       
         this.productsService.editProduct(prod,this.id).subscribe(
           (data:any) => this.getData()
         );
@@ -108,3 +110,4 @@ onSubmit()
 }
 
 
+ 
