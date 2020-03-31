@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ProductsModule} from './products/products.module';
+//import { ProductsModule} from './products/products.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -15,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {AppGaurdService} from './app-gaurd.service'
 @NgModule({
 
-  imports: [BrowserModule,ReactiveFormsModule,ProductsModule,
+  imports: [BrowserModule,ReactiveFormsModule,
+    //ProductsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule],

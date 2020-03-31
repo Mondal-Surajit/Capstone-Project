@@ -9,23 +9,20 @@ import { ProductGaurdService } from './product-gaurd.service';
 import { ProductEditComponent } from './product-edit/product-edit.component'
 
 const prodRoutes: Routes = [
-  { 
-    path: 'products', 
-    children: [
+  
       { path: '', component: ProductsComponent ,},
       { path: 'add', component: ProductAddComponent ,
       canActivate: [ProductGaurdService],
       canDeactivate: [AddProductGuardService]},
       { path: ':id', component: ProductDetailComponent,
-      canActivate: [ProductGaurdService] }
-      ,
+      canActivate: [ProductGaurdService] },
       { path: 'edit/:id', component: ProductEditComponent,
       canActivate: [ProductGaurdService] }
-    ] 
-  }
+     
+  
   
 ];
-
+  
 @NgModule({
   imports: [ 
     RouterModule.forChild(prodRoutes)

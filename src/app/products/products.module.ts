@@ -6,7 +6,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductAddComponent } from './product-add/product-add.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; // Reactive Forms
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ProductsService} from './products.service'
 import { AddProductGuardService } from './product-add/addemployee-guard.service';
 import { ProductGaurdService } from './product-gaurd.service';
@@ -19,7 +19,7 @@ import {ProductEditComponent} from './product-edit/product-edit.component'
         NgMultiSelectDropDownModule.forRoot(),
         ProductsRoutingModule,
         ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
-        BrowserAnimationsModule
+  //      BrowserAnimationsModule
     ],
     providers :[ProductsService,AddProductGuardService, ProductGaurdService ],
     declarations: [ProductsComponent, ProductDetailComponent,ProductAddComponent,ProductEditComponent],
