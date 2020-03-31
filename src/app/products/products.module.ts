@@ -9,18 +9,20 @@ import { ReactiveFormsModule } from '@angular/forms'; // Reactive Forms
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ProductsService} from './products.service'
 import { AddProductGuardService } from './product-add/addemployee-guard.service';
-import { ProductDetailGaurdService } from './product-detail/productdetail-gaurd.service';
-
+import { ProductGaurdService } from './product-gaurd.service';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import {ProductEditComponent} from './product-edit/product-edit.component'
 
 @NgModule({
     imports: [HttpClientModule,
         SharedModule,
+        NgMultiSelectDropDownModule.forRoot(),
         ProductsRoutingModule,
         ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
         BrowserAnimationsModule
     ],
-    providers :[ProductsService,AddProductGuardService, ProductDetailGaurdService ],
-    declarations: [ProductsComponent, ProductDetailComponent,ProductAddComponent],
+    providers :[ProductsService,AddProductGuardService, ProductGaurdService ],
+    declarations: [ProductsComponent, ProductDetailComponent,ProductAddComponent,ProductEditComponent],
     
   })
   export class ProductsModule { }

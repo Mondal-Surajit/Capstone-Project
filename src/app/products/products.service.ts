@@ -17,6 +17,10 @@ export class ProductsService {
 
     constructor (private _http: HttpClient) { }
 
+    ngOnit(){
+      this._http.get(this.url);
+    }
+
  
   getProducts(): Observable<Object>{
     return this._http.get(this.url);

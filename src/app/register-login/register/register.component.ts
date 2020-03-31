@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
   registerForm:FormGroup;
   submitted = false;
   showModal: boolean;
-  
+  show:boolean;
   constructor(private _fb: FormBuilder, private router: Router, private _service:RegloginService,private _router:Router) { }
 
  
@@ -27,6 +27,10 @@ export class RegisterComponent implements OnInit {
   hide()
   {
     this.showModal = false;
+  }
+
+  hidealert() {
+    this.show=false;
   }
 
   ngOnInit() {
@@ -67,11 +71,11 @@ export class RegisterComponent implements OnInit {
         "mobile": this.registerForm.get('mobile').value
       }
         
-        this._service.adduser(newuser)
+        this.show=this._service.adduser(newuser)
         
       }
       this.registerForm.reset()
-      this._router.navigate(['login']);
+      
       this.submitted=false;
       
     }

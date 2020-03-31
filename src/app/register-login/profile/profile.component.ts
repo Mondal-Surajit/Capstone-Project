@@ -9,19 +9,35 @@ import {User} from '../_models/user'
 export class ProfileComponent implements OnInit {
   
   constructor(private _service:RegloginService) { 
-    this.user=this._service.getProfile();
-    console.log(this.user)
+    
   }
 
-  user:User;
+  user:User={
+    id:null,
+    mailid: null,
+    password: null,
+    firstname: null,
+    lastname: null,
+    location: null,
+    mobile:null,
+  }
   
   show:boolean;
   ngOnInit(): void {
+    this.showprofile();
   }
 
+  isLoggedIn() {
+    return this._service.isLoggedIn();
+  }
+
+
   showprofile(){
+    if(this.isLoggedIn()){
     this.show=true;
-    console.log(this.user);
+    let user= localStorage.getItem('routeguard-app-login')
+   this.user= JSON.parse(user);
+  }
 }
 
 }

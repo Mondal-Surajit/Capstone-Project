@@ -1,15 +1,8 @@
-<div class="container">
-    
-    <button type="button" class="btn btn-primary" (click) = "show()">Add Product</button>
-     </div>
-  <!-- Creates the bootstrap modal where the image will appear -->
-  <div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Add New Product</h4>
-      </div>
-      <div class="modal-body">
+<div class="jumbotron">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 offset-sm-3">
+                  <h2>Add New Product</h2>
                 <form [formGroup]="addform" #formRef="ngForm" (ngSubmit)="onSubmit()">
                       <div class="row">
                          <div class="col-sm-6">
@@ -58,14 +51,14 @@
                                   </div>
                                </div>
                          </div> 
+                        </div>
+             <div class="col-sm-6 ">
+             <button type="submit"  class="btn btn-primary" [disabled]="formRef.invalid" >Submit</button>
              </div>
-             <button type="submit" [type]="'finish'" class="btn btn-primary" [disabled]="formRef.invalid" >Submit</button>
+             <div class="col-sm-6 ">
+             <button type="button" class="btn btn-dark"  (click) = "back()">Close</button>
+            </div>
                 </form>
-     
-    
- </div>
-      <div class="modal-footer">
-       <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hide()">Close</button>
       
       </div>
     </div>

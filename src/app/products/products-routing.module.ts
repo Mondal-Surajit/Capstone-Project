@@ -5,19 +5,22 @@ import { ProductsComponent } from './products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { AddProductGuardService } from './product-add/addemployee-guard.service';
 import { ProductAddComponent } from './product-add/product-add.component';
-import { ProductDetailGaurdService } from './product-detail/productdetail-gaurd.service';
-
+import { ProductGaurdService } from './product-gaurd.service';
+import { ProductEditComponent } from './product-edit/product-edit.component'
 
 const prodRoutes: Routes = [
   { 
     path: 'products', 
     children: [
-      { path: '', component: ProductsComponent ,
+      { path: '', component: ProductsComponent ,},
+      { path: 'add', component: ProductAddComponent ,
+      canActivate: [ProductGaurdService],
       canDeactivate: [AddProductGuardService]},
-      { path: 'add', component: ProductsComponent ,
-      canDeactivate: [ProductAddComponent]},
       { path: ':id', component: ProductDetailComponent,
-      canActivate: [ProductDetailGaurdService] },
+      canActivate: [ProductGaurdService] }
+      ,
+      { path: 'edit/:id', component: ProductEditComponent,
+      canActivate: [ProductGaurdService] }
     ] 
   }
   

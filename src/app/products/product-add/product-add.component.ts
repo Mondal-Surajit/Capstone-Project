@@ -1,7 +1,9 @@
-import { Component, OnInit,Input, Output, EventEmitter, ViewChild, OnChanges, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../products.service';
 import { IProduct } from '../product.model';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import * as uuid from 'uuid';
+import { Router } from '@angular/router';
 
 
 
@@ -12,26 +14,15 @@ import * as uuid from 'uuid';
 })
 
 export class ProductAddComponent implements OnInit {
-  @Input() product: IProduct;
-  @Output() finish = new EventEmitter();
+ 
   addform: FormGroup;
   showModal: boolean;
   
   submitted = false;
 
-  constructor(private _fb: FormBuilder) { }
+  constructor(private _fb: FormBuilder,private _router:Router, private productsService: ProductsService) { }
 
-  show()
-  {
-    this.showModal = true; // Show-Hide Modal Check
-    
-  }
-  //Bootstrap Modal Close event
-  hide()
-  {
-    this.showModal = false;
-  }
-
+  
   ngOnInit() {
     
     this.addform = this._fb.group({
@@ -47,36 +38,39 @@ export class ProductAddComponent implements OnInit {
    get f() { return this.addform.controls; }
 
 
+   back(){
+     
+     this._router.navigate(['products']);
+   }
+
    onSubmit()
    
    {
     this.submitted = true;
  
     if (this.addform.invalid) {
-      return;
-  }
+      return; }
 
-
-  if(this.submitted)
-  {
-    this.showModal = false;
-    
-    
-
-    this.finish.emit({
-      prod : {
+      if(this.submitted)
+    {
+      let prod = {
         "id":uuid.v4(),
         "name": this.addform.get('name').value,
         "description": this.addform.get('desc').value,
         "manufacturer": this.addform.get('manuf').value,
         "price":this.addform.get('price').value,
         "qty":this.addform.get('qty').value,
-      }
-    });
+        }
+    
+        this.productsService.addProduct(prod).subscribe(
+          (data:any) => {this.productsService.getProduct;
+            this._router.navigate(['products']);
+          });
 
-this.addform.reset()
-
-
+     
+     this.submitted=false;
+     
+          
   }
 
 

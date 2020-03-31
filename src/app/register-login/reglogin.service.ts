@@ -47,7 +47,7 @@ pswd:string;
     }
 
     login() {
-      localStorage.setItem('routeguard-app-login', "1");
+      localStorage.setItem('routeguard-app-login', JSON.stringify(this.user));
       
     }
   
@@ -57,7 +57,7 @@ pswd:string;
     }
    
     isLoggedIn() {
-      if (localStorage.getItem('routeguard-app-login') == '1')
+      if (localStorage.getItem('routeguard-app-login') != null)
      return true;
       else
         return false;
@@ -89,11 +89,13 @@ pswd:string;
     (response) => console.log(response),
     (error) => console.log(error)
     )
+
+    return true;
      
 
   }
 
-  
+ 
 
   
 

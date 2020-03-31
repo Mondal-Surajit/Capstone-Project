@@ -91,7 +91,7 @@ export class LoginComponent implements OnInit {
     if(val)
     {
     this.showModal = this.exists;
-    this.location.back();
+    this._router.navigate(['profile'])
     this.loginForm.reset();
     this.submitted=false;
     console.log('LOGIN SUCESSFUL')

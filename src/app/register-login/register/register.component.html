@@ -52,7 +52,7 @@
     <div class="form-group">
         <button   type="submit" class="btn btn-primary" > Register
         </button>
-        <div [style.display]="showModal ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div [style.display]="show ? 'block' : 'none'" class="modal" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -62,7 +62,7 @@
                     <p>Thank you for registering. Please use your Email ID as Username to login</p>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hide()">Close</button>
+                <button type="button" class="btn btn-dark" data-dismiss="modal" (click) = "hidealert()">Close</button>
             </div>
 			</div>
 			</div>

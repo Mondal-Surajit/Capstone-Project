@@ -1,20 +1,12 @@
 {
   "products": [
     {
-      "id": "d690ec50-59b0-4bfa-b1ba-b807d767b79f",
-      "name": "Iphone X",
-      "description": "New Iphone X has a lot of features",
-      "manufacturer": "Apple Inc",
-      "price": "50000",
-      "qty": "500"
-    },
-    {
       "id": "d843c66c-c08a-4775-832c-45550b959d23",
       "name": "Samsung S10",
       "description": "New Samsung S10, full touch screen",
       "manufacturer": "Samsung",
       "price": "20000",
-      "qty": "56"
+      "qty": "55"
     },
     {
       "id": "40c6ecc1-6122-417e-abc6-06415648fc5c",
@@ -30,15 +22,31 @@
       "description": "Used to write Notes",
       "manufacturer": "Natraj",
       "price": "123000",
-      "qty": "12"
+      "qty": "14"
     },
     {
       "id": "a5c90c6d-8252-41f4-83d6-e1cf606c6d8d",
-      "name": "Redmi Note7 PRO",
-      "description": "It's an awesome smart phone",
-      "manufacturer": "Xiomi Production",
-      "price": "11000",
-      "qty": "55"
+      "name": "Redmi",
+      "description": "It's a smart phone",
+      "manufacturer": "Xiomi",
+      "price": "15000",
+      "qty": "10"
+    },
+    {
+      "id": "6bf98694-926a-4aa6-ab04-3e710b9ef946",
+      "name": "S10 FullScreen",
+      "description": "Full Touch Screen Phone",
+      "manufacturer": "Samsung",
+      "price": "20000",
+      "qty": "32"
+    },
+    {
+      "id": "ac5b2c17-1515-4270-a4ba-eebbda47e8c0",
+      "name": "Lenovo ",
+      "description": "Laptop with i5 Processor",
+      "manufacturer": "Lenovo",
+      "price": "35455",
+      "qty": "6767"
     }
   ],
   "users": [
@@ -124,13 +132,40 @@
       "mobile": 11223123
     },
     {
-      "id": "e2f22351-7fa9-4af6-b55d-6a886d0d768d",
-      "mailid": "sm",
-      "password": "sm",
-      "firstname": "surajit",
+      "id": "61532d78-fe9b-4d04-a79d-b25fb09c8353",
+      "mailid": "surajit@gmail.com",
+      "password": "surajit",
+      "firstname": "Surajit",
+      "lastname": "Mondal",
+      "location": "Kolkata",
+      "mobile": 9123897854
+    },
+    {
+      "id": "0f051ff8-e6f5-4b0a-9aac-9332f728facd",
+      "mailid": "sura@gmail.com",
+      "password": "test",
+      "firstname": "sura",
       "lastname": "mondal",
-      "location": "kolkata",
-      "mobile": 6777647
+      "location": "New York",
+      "mobile": 785412114
+    },
+    {
+      "id": "b1a3d444-71ad-4edd-ac46-cad09e750d58",
+      "mailid": "adil",
+      "password": "adil",
+      "firstname": "adil",
+      "lastname": "adil",
+      "location": "adil",
+      "mobile": 324321221
+    },
+    {
+      "id": "af3a1590-2fd2-4217-8a7e-5e297499fe9e",
+      "mailid": "surajit",
+      "password": "surajit",
+      "firstname": "surajit",
+      "lastname": "surajit",
+      "location": "surajit",
+      "mobile": 54352211
     }
   ]
 }
