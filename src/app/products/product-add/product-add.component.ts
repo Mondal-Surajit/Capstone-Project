@@ -1,9 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { IProduct } from '../product.model';
-import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, NgForm, AbstractControl } from '@angular/forms';
 import * as uuid from 'uuid';
 import { Router } from '@angular/router';
+
+
+function nameMinLength(ctrl: AbstractControl): { [key: string]: boolean } | null {
+  if (ctrl.value != null) {
+    if (ctrl.value.length == 0)
+      return { 'required': true };
+    else if (ctrl.value.length < 3)
+		  return { 'minlength': true };
+  }
+	return null;
+}
+
+function descMinLength(ctrl: AbstractControl): { [key: string]: boolean } | null {
+  if (ctrl.value != null) {
+    if (ctrl.value.length == 0)
+      return { 'required': true };
+    else if (ctrl.value.length < 10)
+		  return { 'minlength': true };
+  }
+	return null;
+}
+
+function manufMinLength(ctrl: AbstractControl): { [key: string]: boolean } | null {
+  if (ctrl.value != null) {
+    if (ctrl.value.length == 0)
+      return { 'required': true };
+    else if (ctrl.value.length < 5)
+		  return { 'minlength': true };
+  }
+	return null;
+}
 
 
 
@@ -27,10 +58,10 @@ export class ProductAddComponent implements OnInit {
     
     this.addform = this._fb.group({
       
-      name: ['', [Validators.required, Validators.minLength(3)]],
-      desc: ['', [Validators.required, Validators.minLength(10)]],
-      manuf: ['', [Validators.required, Validators.minLength(5)]],
-      price:['', [Validators.required, Validators.minLength(2)]],
+      name: ['', [Validators.required, Validators.minLength(3) , nameMinLength] ],
+      desc: ['', [Validators.required, Validators.minLength(10) , descMinLength]],
+      manuf: ['', [Validators.required, Validators.minLength(5) , manufMinLength]],
+      price:['', [Validators.required, Validators.minLength(1)]],
       qty:['', [Validators.required, Validators.minLength(1)]],
   });
    }

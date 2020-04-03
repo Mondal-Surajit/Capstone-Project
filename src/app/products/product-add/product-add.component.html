@@ -12,6 +12,11 @@
                                   <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
                                         <div *ngIf="f.name.errors.required">Name is a required field </div>
                                   </div>
+                                  
+                                  <div *ngIf="f.name.errors?.minlength" style="color:red">
+                                    Name must be at least 3 characters long.
+                                   </div>
+                                  
                                </div>
                          </div> 
                         <div class="col-sm-6">
@@ -21,6 +26,10 @@
                                   <div *ngIf="submitted && f.desc.errors" class="invalid-feedback">
                                         <div *ngIf="f.desc.errors.required">Description Field is required</div>
                                   </div>
+
+                                  <div *ngIf="f.desc.errors?.minlength" style="color:red">
+                                    Description must be at least 10 characters long.
+                                   </div>
                                </div>
                          </div> 
                          <div class="col-sm-6">
@@ -28,24 +37,32 @@
                                   <label>Manufacturer</label>
                                   <input type="text" formControlName="manuf" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.manuf.errors }" />
                                   <div *ngIf="submitted && f.manuf.errors" class="invalid-feedback">
-                                        <div *ngIf="f.manuf.errors.required">Manufacturer Field is required</div>
+                                        <div *ngIf="f.manuf.errors.required">
+                                              Manufacturer Field is required</div>
                                   </div>
+
+                                  <div *ngIf="f.manuf.errors?.minlength" style="color:red">
+                                    Manufacturer must be at least 5 characters long.
+                                   </div>
                                </div>
                          </div> 
                         <div class="col-sm-6">
                             <div class="form-group">
                                   <label>Price</label>
-                                  <input type="text" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                                  <input type="number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
                                   <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                                        <div *ngIf="f.price.errors.required"> Price Field is required</div>
+                                        <div *ngIf="f.price.errors.required" >
+                                               Price Field is required</div>
                                   </div>
+
+                                  
                                </div>
                          </div> 
                          
                          <div class="col-sm-6">
                             <div class="form-group">
                                   <label>Quantity</label>
-                                  <input type="text" formControlName="qty" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.qty.errors }" />
+                                  <input type="number" formControlName="qty" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.qty.errors }" />
                                   <div *ngIf="submitted && f.qty.errors" class="invalid-feedback">
                                         <div *ngIf="f.qty.errors.required">Quantity Field is required</div>
                                   </div>

@@ -85,7 +85,7 @@ qty() {this.pqty? this.pqty=false:this.pqty=true}
 
 
   deleteSelected(event){
-
+ 
     // console.log("In delete selected");
     // console.log(event);
 

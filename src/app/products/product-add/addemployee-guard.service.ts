@@ -7,6 +7,7 @@ export class AddProductGuardService implements CanDeactivate<ProductAddComponent
     canDeactivate(component: ProductAddComponent): boolean {
          if (component.addform.dirty && !component.submitted) {
          return confirm('Are you sure you want to leave ?');
+        
         }
         return true;
     }
