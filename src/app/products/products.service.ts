@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ProductsService {
-  private url = "http://localhost:3000/products/";
+  private url = "http://localhost:3000/products";
     private httpOptions = {
         headers: new HttpHeaders({
           'Content-Type':  'application/json'
@@ -33,7 +33,7 @@ export class ProductsService {
 
   getOne(id) : Observable<any> {
 
-    return this._http.get(this.url+id).pipe(map(res =>
+    return this._http.get(`${this.url}/${id}`).pipe(map(res =>
       {
         return res;  
            
@@ -57,13 +57,12 @@ export class ProductsService {
         return this._http.put(edittedURL, product, this.httpOptions);
   }
 
-  removeProduct(id) {
+  removeProduct(id:string[]) {
     
-    let deleteURL = `${this.url}/${id}`;
-    //return this._http.delete<void>(deleteURL);
-    return this._http.delete(deleteURL);
-
-
+   
+      for( let i=0; i<id.length; i++) {
+          this._http.delete('http://localhost:3000/products/' + id[i]).subscribe();
+      }
 
   }
 

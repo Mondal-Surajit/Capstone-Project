@@ -7,6 +7,7 @@ import { AddProductGuardService } from './product-add/addemployee-guard.service'
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductGaurdService } from './product-gaurd.service';
 import { ProductEditComponent } from './product-edit/product-edit.component'
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 const prodRoutes: Routes = [
   
@@ -18,7 +19,9 @@ const prodRoutes: Routes = [
       canActivate: [ProductGaurdService] },
       { path: 'edit/:id', component: ProductEditComponent,
       canActivate: [ProductGaurdService] }
-     
+      
+      
+      
   
   
 ];

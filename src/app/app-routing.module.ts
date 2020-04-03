@@ -15,9 +15,10 @@ const appRoutes: Routes = [
   { path: 'profile',component:ProfileComponent,
   canActivate:[AppGaurdService]
 },
-  { path: 'products' , loadChildren: './products/products.module#ProductsModule' },
+  { path: 'products' , loadChildren: () =>import('./products/products.module').then(mod=> mod.ProductsModule) },
   { path: '**', component: PageNotFoundComponent }
 ];
+
 
 
 @NgModule({

@@ -18,7 +18,7 @@ export class ProductAddComponent implements OnInit {
   addform: FormGroup;
   showModal: boolean;
   
-  submitted = false;
+  submitted ;
 
   constructor(private _fb: FormBuilder,private _router:Router, private productsService: ProductsService) { }
 

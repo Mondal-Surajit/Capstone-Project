@@ -5,9 +5,9 @@ import { ProductAddComponent } from './product-add.component';
 @Injectable()
 export class AddProductGuardService implements CanDeactivate<ProductAddComponent> {
     canDeactivate(component: ProductAddComponent): boolean {
-        // if (component.addform.dirty && !component.addform.status) {
-        //     return confirm('Are you sure you want to leave ?');
-        // }
+         if (component.addform.dirty && !component.submitted) {
+         return confirm('Are you sure you want to leave ?');
+        }
         return true;
     }
 }

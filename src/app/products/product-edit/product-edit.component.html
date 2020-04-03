@@ -10,7 +10,7 @@
                                 <label>Product Name</label>
                                 <input type="text" formControlName="name" class="form-control" [(ngModel)]="editProd.name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
                                 <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                                      <div *ngIf="f.name.errors.required">Field is required</div>
+                                      <div *ngIf="f.name.errors.required"> Name Field is required</div>
                                 </div>
                              </div>
                        </div> 
@@ -19,7 +19,7 @@
                                 <label>Product description</label>
                                 <input type="text" formControlName="desc" class="form-control" [(ngModel)]="editProd.description" [ngClass]="{ 'is-invalid': submitted && f.desc.errors }" />
                                 <div *ngIf="submitted && f.desc.errors" class="invalid-feedback">
-                                      <div *ngIf="f.desc.errors.required">Field is required</div>
+                                      <div *ngIf="f.desc.errors.required">Description Field is required</div>
                                 </div>
                              </div>
                        </div> 
@@ -28,7 +28,7 @@
                                 <label>Manufacturer</label>
                                 <input type="text" formControlName="manuf" class="form-control" [(ngModel)]="editProd.manufacturer" [ngClass]="{ 'is-invalid': submitted && f.manuf.errors }" />
                                 <div *ngIf="submitted && f.manuf.errors" class="invalid-feedback">
-                                      <div *ngIf="f.manuf.errors.required">Field is required</div>
+                                      <div *ngIf="f.manuf.errors.required">Manufacturer Field is required</div>
                                 </div>
                              </div>
                        </div> 
@@ -37,7 +37,7 @@
                                 <label>Price</label>
                                 <input type="text" formControlName="price" class="form-control" [(ngModel)]="editProd.price" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
                                 <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
-                                      <div *ngIf="f.price.errors.required">Field is required</div>
+                                      <div *ngIf="f.price.errors.required">Price Field is required</div>
                                 </div>
                              </div>
                        </div> 
@@ -47,14 +47,15 @@
                                 <label>Quantity</label>
                                 <input type="text" formControlName="qty" class="form-control" [(ngModel)]="editProd.qty" [ngClass]="{ 'is-invalid': submitted && f.qty.errors }" />
                                 <div *ngIf="submitted && f.qty.errors" class="invalid-feedback">
-                                      <div *ngIf="f.qty.errors.required">Field is required</div>
+                                      <div *ngIf="f.qty.errors.required">Quantity Field is required</div>
                                 </div>
                              </div>
                        </div> 
                       </div>
            <div class="col-sm-6 ">
-           <button type="submit"  class="btn btn-primary" [disabled]="formRef.invalid" >Submit</button>
+           <button type="submit"  class="btn btn-primary"  >Submit</button>
            </div>
+           <!-- [disabled]="formRef.invalid" -->
            <div class="col-sm-6 ">
            <button type="button" class="btn btn-dark"  (click) = "back()">Close</button>
           </div>
