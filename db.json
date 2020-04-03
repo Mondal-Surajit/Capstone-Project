@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "d843c66c-c08a-4775-832c-45550b959d23",
+      "id": "d843c66c-c08a-4775-832c-45550b959d73",
       "name": "Samsung S10",
       "description": "New Samsung S10, full touch screen",
       "manufacturer": "Samsung",
@@ -9,44 +9,60 @@
       "qty": "55"
     },
     {
-      "id": "40c6ecc1-6122-417e-abc6-06415648fc5c",
-      "name": "HP G500 Laptop",
-      "description": "New HP Laptop with core i5 processor and touch screen",
-      "manufacturer": "HP",
-      "price": "34000",
-      "qty": "23"
+      "id": "2fd0bf2b-b4c9-4201-987a-ec76b74df1b1",
+      "name": "vcvvx",
+      "description": "xvxvxvddvdvdvd",
+      "manufacturer": "vdvdv",
+      "price": "dvdvdvdv",
+      "qty": "dvdv"
     },
     {
-      "id": "80d30e72-aee6-4407-abbb-2a1e08171b7e",
-      "name": "Pencil",
-      "description": "Used to write Notes",
-      "manufacturer": "Natraj",
-      "price": "123000",
-      "qty": "14"
-    },
-    {
-      "id": "a5c90c6d-8252-41f4-83d6-e1cf606c6d8d",
-      "name": "Redmi",
-      "description": "It's a smart phone",
-      "manufacturer": "Xiomi",
-      "price": "15000",
-      "qty": "10"
-    },
-    {
-      "id": "6bf98694-926a-4aa6-ab04-3e710b9ef946",
-      "name": "S10 FullScreen",
-      "description": "Full Touch Screen Phone",
+      "id": "d943c69c-c08a-4775-832c-45550b959d73",
+      "name": "Samsung S10",
+      "description": "New Samsung S10, full touch screen",
       "manufacturer": "Samsung",
       "price": "20000",
-      "qty": "32"
+      "qty": "55"
     },
     {
-      "id": "ac5b2c17-1515-4270-a4ba-eebbda47e8c0",
-      "name": "Lenovo ",
-      "description": "Laptop with i5 Processor",
-      "manufacturer": "Lenovo",
-      "price": "35455",
-      "qty": "6767"
+      "id": "d943c66c-c08a-4775-832c-45959a73",
+      "name": "Samsung S10",
+      "description": "New Samsung S10, full touch screen",
+      "manufacturer": "Samsung",
+      "price": "20000",
+      "qty": "55"
+    },
+    {
+      "id": "d943c66c-c08a-4775-832c-45554b959d73",
+      "name": "Samsung S10",
+      "description": "New Samsung S10, full touch screen",
+      "manufacturer": "Samsung",
+      "price": "20000",
+      "qty": "55"
+    },
+    {
+      "id": "d943c66c-c08a-4775-832c-45550c959d73",
+      "name": "Samsung S10",
+      "description": "New Samsung S10, full touch screen",
+      "manufacturer": "Samsung",
+      "price": "20000",
+      "qty": "55"
+    },
+    {
+      "id": "d943c66c-832c-45550b959d73",
+      "name": "Samsung S10",
+      "description": "New Samsung S10, full touch screen",
+      "manufacturer": "Samsung",
+      "price": "20000",
+      "qty": "55"
+    },
+    {
+      "id": "d94-4775-832c-45550b959d73",
+      "name": "Samsung S10",
+      "description": "New Samsung S10, full touch screen",
+      "manufacturer": "Samsung",
+      "price": "20000",
+      "qty": "55"
     }
   ],
   "users": [
