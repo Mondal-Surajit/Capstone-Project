@@ -4,6 +4,8 @@ import { ProductsService } from '../products.service'
 import { IProduct } from '../product.model';
 import { Location } from "@angular/common"
 
+
+
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
@@ -11,9 +13,9 @@ import { Location } from "@angular/common"
 })
 export class ProductDetailComponent implements OnInit {
 
-  data : IProduct; 
+ data : IProduct; 
   id : any;
-  
+   
 
   constructor(private _route : ActivatedRoute,
               private productsService: ProductsService,
@@ -25,15 +27,20 @@ export class ProductDetailComponent implements OnInit {
     //this.product = this.productsService.getProduct(id);
     this.getOne();
     
+    
   } 
   
   getOne() {
       this.productsService.getOne(this.id).subscribe(data => {
           this.data = data;
-
+          this.productsService.addCounter(this.data);
+          // console.log(this.newdata)
+         
       })
 
   }
+
+  
 
   goBack(): void {
     this.location.back();

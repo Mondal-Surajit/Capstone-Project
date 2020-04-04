@@ -1,187 +1,98 @@
 {
   "products": [
     {
-      "id": "d843c66c-c08a-4775-832c-45550b959d73",
-      "name": "Samsung S10",
-      "description": "New Samsung S10, full touch screen",
-      "manufacturer": "Samsung",
-      "price": "20000",
-      "qty": "55"
+      "id": "843cccd1-c007-4d6b-934d-f36225375674",
+      "name": "asasasasa",
+      "description": "asasasasasasa",
+      "manufacturer": "sasasasa",
+      "price": 1212121,
+      "qty": 12
     },
     {
-      "id": "2fd0bf2b-b4c9-4201-987a-ec76b74df1b1",
-      "name": "vcvvx",
-      "description": "xvxvxvddvdvdvd",
-      "manufacturer": "vdvdv",
-      "price": "dvdvdvdv",
-      "qty": "dvdv"
+      "id": "b6d092b5-d693-4027-8a04-bfa01a52e150",
+      "name": "dsdsfsf",
+      "description": "sfsfsfsfsfsfsfsfsfsf",
+      "manufacturer": "sfsfsfsfsf",
+      "price": 121212,
+      "qty": 212
     },
     {
-      "id": "d943c69c-c08a-4775-832c-45550b959d73",
-      "name": "Samsung S10",
-      "description": "New Samsung S10, full touch screen",
-      "manufacturer": "Samsung",
-      "price": "20000",
-      "qty": "55"
+      "id": "67afee0b-e7fb-4fb4-b025-769db48123e7",
+      "name": "dasaad",
+      "description": "dasaaddasaad",
+      "manufacturer": "dasaad",
+      "price": 2313232,
+      "qty": 232
     },
     {
-      "id": "d943c66c-c08a-4775-832c-45959a73",
-      "name": "Samsung S10",
-      "description": "New Samsung S10, full touch screen",
-      "manufacturer": "Samsung",
-      "price": "20000",
-      "qty": "55"
+      "id": "ab0b369a-5f4d-48ae-8448-f8bafeab3511",
+      "name": "sasasa",
+      "description": "adadadadada",
+      "manufacturer": "dadadad",
+      "price": 1212121,
+      "qty": 2121
     },
     {
-      "id": "d943c66c-c08a-4775-832c-45554b959d73",
-      "name": "Samsung S10",
-      "description": "New Samsung S10, full touch screen",
-      "manufacturer": "Samsung",
-      "price": "20000",
-      "qty": "55"
+      "id": "45f7f945-88c2-44b2-ab06-c0e8c113843c",
+      "name": "wewewewe",
+      "description": "e2e2ewewewew",
+      "manufacturer": "ewewewe",
+      "price": 1212121,
+      "qty": 1212
     },
     {
-      "id": "d943c66c-c08a-4775-832c-45550c959d73",
-      "name": "Samsung S10",
-      "description": "New Samsung S10, full touch screen",
-      "manufacturer": "Samsung",
-      "price": "20000",
-      "qty": "55"
+      "id": "4614cd4c-3850-40be-9829-87371d084607",
+      "name": "wewewew",
+      "description": "dsdsdsdwdwwewew",
+      "manufacturer": "ewewewew",
+      "price": 11212,
+      "qty": 21
     },
     {
-      "id": "d943c66c-832c-45550b959d73",
-      "name": "Samsung S10",
-      "description": "New Samsung S10, full touch screen",
-      "manufacturer": "Samsung",
-      "price": "20000",
-      "qty": "55"
+      "id": "bddcc220-aeef-49c2-b26f-0bb20db87a95",
+      "name": "wewewe",
+      "description": "wewewewewewe",
+      "manufacturer": "wewewew",
+      "price": 32323,
+      "qty": 32
     },
     {
-      "id": "d94-4775-832c-45550b959d73",
-      "name": "Samsung S10",
-      "description": "New Samsung S10, full touch screen",
-      "manufacturer": "Samsung",
-      "price": "20000",
-      "qty": "55"
+      "id": "f0486704-44e5-4242-8701-9ab88ae9edbc",
+      "name": "dsdd",
+      "description": "dsdsdsdsds",
+      "manufacturer": "sdsdsd",
+      "price": 2321212,
+      "qty": 1212
+    },
+    {
+      "id": "b8c3842d-48df-479c-bdd2-990ccadb2f40",
+      "name": "sasasasa",
+      "description": "sasasasasasasasa",
+      "manufacturer": "sasasasa",
+      "price": 1212,
+      "qty": 12
+    },
+    {
+      "id": "5ac64d0c-bb11-42be-bc7a-68ccfc2c5ad2",
+      "name": "aaaa",
+      "description": "bbbbbbbbbb",
+      "manufacturer": "ccccccccc",
+      "price": 78,
+      "qty": 87
     }
   ],
   "users": [
     {
-      "id": "d843c66c-c08a-4775-421r-45550b959d23",
+      "name": "typicode"
+    },
+    {
+      "id": "3d70402e-80da-4312-8734-09624d813c6f",
       "mailid": "md",
       "password": "md",
-      "firstname": "aadil",
-      "lastname": "hussain",
-      "location": "kolkata",
-      "mobile": "912327675"
-    },
-    {
-      "id": "f78dddc0-d2bb-4fee-bf72-234cf724974f",
-      "mailid": "mdaadilhus9@gmail.com",
-      "password": "hello",
-      "firstname": "Md",
-      "lastname": "Hussain",
-      "location": "usa",
-      "mobile": 912343212
-    },
-    {
-      "id": "5d6e7d04-d5d0-4910-9f47-8f7f7981653d",
-      "mailid": "md@gmail.com",
-      "password": "aadil",
-      "firstname": "Md",
-      "lastname": "Hussain",
-      "location": "scan",
-      "mobile": 123321234
-    },
-    {
-      "id": "0eab3a19-b500-49af-a8ca-2e228985a230",
-      "mailid": "hus9@gmail.com",
-      "password": "13233445",
-      "firstname": "Md",
-      "lastname": "Hussain",
-      "location": "kol",
-      "mobile": 3455432345
-    },
-    {
-      "id": "324b2ed2-c019-4d29-b3dc-9476958ed02a",
-      "mailid": "md9@gmail.com",
-      "password": "5345454",
-      "firstname": "Md",
-      "lastname": "Hussain",
-      "location": "usa",
-      "mobile": 121212121
-    },
-    {
-      "id": "c708be8c-d0ea-48bc-a794-966013e0294e",
-      "mailid": "mdaadilhus9@gmail.com",
-      "password": "425464634",
-      "firstname": "Md",
-      "lastname": "Hussain",
-      "location": "fhdfhdfhdf",
-      "mobile": 797967968968
-    },
-    {
-      "id": "c1694284-40c1-455a-8429-0ec2104b0778",
-      "mailid": "mdaadilhus9@gmail.com",
-      "password": "12121212",
-      "firstname": "Md",
-      "lastname": "Hussain",
-      "location": "mumbai",
-      "mobile": 545542332
-    },
-    {
-      "id": "c1f9b50b-8d33-49dd-9a49-ba4a6c1e9ea7",
-      "mailid": "mdaadilhus9@gmail.com",
-      "password": "5656456464",
-      "firstname": "Md",
-      "lastname": "Hussain",
-      "location": "goa",
-      "mobile": 12121212121
-    },
-    {
-      "id": "cd91fc1f-29f7-4971-9b9e-c18925d088e7",
-      "mailid": "test",
-      "password": "test",
-      "firstname": "test",
-      "lastname": "test",
-      "location": "test",
-      "mobile": 11223123
-    },
-    {
-      "id": "61532d78-fe9b-4d04-a79d-b25fb09c8353",
-      "mailid": "surajit@gmail.com",
-      "password": "surajit",
-      "firstname": "Surajit",
-      "lastname": "Mondal",
-      "location": "Kolkata",
-      "mobile": 9123897854
-    },
-    {
-      "id": "0f051ff8-e6f5-4b0a-9aac-9332f728facd",
-      "mailid": "sura@gmail.com",
-      "password": "test",
-      "firstname": "sura",
-      "lastname": "mondal",
-      "location": "New York",
-      "mobile": 785412114
-    },
-    {
-      "id": "b1a3d444-71ad-4edd-ac46-cad09e750d58",
-      "mailid": "adil",
-      "password": "adil",
-      "firstname": "adil",
-      "lastname": "adil",
-      "location": "adil",
-      "mobile": 324321221
-    },
-    {
-      "id": "af3a1590-2fd2-4217-8a7e-5e297499fe9e",
-      "mailid": "surajit",
-      "password": "surajit",
-      "firstname": "surajit",
-      "lastname": "surajit",
-      "location": "surajit",
-      "mobile": 54352211
+      "firstname": "md",
+      "lastname": "md",
+      "location": "md",
+      "mobile": 91232122
     }
   ]
 }

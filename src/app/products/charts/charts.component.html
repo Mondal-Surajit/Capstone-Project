@@ -1,0 +1,62 @@
+<br><br>
+<div *ngIf="ifdata">
+<div class="col-md-3">
+  <button (click)="showMenu()" name="customize" class="btn btn-primary">Customize View</button>
+ 
+
+      <br><br>
+  <div *ngIf="!show" id="grpChkBox" class="card" style="width: 20rem;">
+    <div class="card-header bg-dark text-white">Select to toggle Other Views</div>
+    <div class="card-body">
+    <!--<p><input type="checkbox" name="prdid" /> Product ID</p>-->
+    <p><input type="checkbox" name="pname" (change)="topthree()" class="card-text"  /> Top 3</p>
+    <p><input type="checkbox" name="pdesc" (change)="topfive()" class="card-text"/> Top 5</p> 
+    <p><input type="checkbox" name="pmanu" (change)="topseven()" class="card-text" /> Top 7</p>
+  </div>
+  </div>
+</div>
+
+
+<div *ngIf="top3" style="width: 60%;">
+  <canvas
+      baseChart
+      [chartType]="'pie'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+      [legend]="true"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+</div>
+
+<div *ngIf="top5" style="width: 60%;">
+  <canvas
+      baseChart
+      [chartType]="'bar'"
+      [datasets]="chartData1"
+      [labels]="chartLabels1"
+      [options]="chartOptions"
+      [legend]="true"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+</div>
+
+<div *ngIf="top7" style="width: 60%;">
+  <canvas
+      baseChart
+      [chartType]="'line'"
+      [datasets]="chartData2"
+      [labels]="chartLabels2"
+      [options]="chartOptions"
+      [legend]="true"
+      (chartClick)="onChartClick($event)">
+  </canvas>
+</div>
+</div>
+
+<div *ngIf="!ifdata">
+    <p>
+      NO DATA VIEWED IN THE APP HISTORY
+    </p>
+</div>
+

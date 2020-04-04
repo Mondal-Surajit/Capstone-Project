@@ -49,13 +49,13 @@ export class ProductAddComponent implements OnInit {
   addform: FormGroup;
   showModal: boolean;
   
-  submitted ;
+  submitted:boolean=false ;
 
   constructor(private _fb: FormBuilder,private _router:Router, private productsService: ProductsService) { }
 
   
   ngOnInit() {
-    
+    this.submitted=false;
     this.addform = this._fb.group({
       
       name: ['', [Validators.required, Validators.minLength(3) , nameMinLength] ],
@@ -94,12 +94,10 @@ export class ProductAddComponent implements OnInit {
         }
     
         this.productsService.addProduct(prod).subscribe(
-          (data:any) => {this.productsService.getProduct;
+          (data:any) => {this.productsService.getProducts();
             this._router.navigate(['products']);
           });
 
-     
-     this.submitted=false;
      
           
   }
