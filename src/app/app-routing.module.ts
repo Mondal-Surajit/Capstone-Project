@@ -8,7 +8,7 @@ import {ProfileComponent} from './register-login/profile/profile.component'
 import {AppGaurdService} from './app-gaurd.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'register', component: RegisterComponent},
   { path: 'login', component:LoginComponent},

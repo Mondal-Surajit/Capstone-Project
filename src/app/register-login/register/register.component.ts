@@ -1,10 +1,63 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { RegloginService } from '../reglogin.service';
 import * as uuid from 'uuid';
 
+function phoneNumberValidator(
+  control: AbstractControl
+): { [key: string]: any } | null {
+  const valid = /^\d+$/.test(control.value)
+  return valid
+    ? null
+    : { invalidNumber: { valid: false, value: control.value } }
+}
+ 
+function passMinLength(ctrl: AbstractControl): { [key: string]: boolean } | null {
+  if (ctrl.value != null) {
+    if (ctrl.value.length == 0)
+      return { 'required': true };
+    else if (ctrl.value.length < 6)
+      return { 'minlength': true };
+  }
+  return null;
+}
+ 
+function firstNameMinLength(ctrl: AbstractControl): { [key: string]: boolean } | null {
+  if (ctrl.value != null) {
+    if (ctrl.value.length == 0)
+      return { 'required': true };
+    else if (ctrl.value.length < 4)
+      return { 'minlength': true };
+  }
+  return null;
+}
+ 
+function lastNameMinLength(ctrl: AbstractControl): { [key: string]: boolean } | null {
+  if (ctrl.value != null) {
+    if (ctrl.value.length == 0)
+      return { 'required': true };
+    else if (ctrl.value.length <4 )
+      return { 'minlength': true };
+  }
+  return null;
+}
+ 
+function emailDomainValidator(control: FormControl) {
+  let email = control.value;
+  if (email && email.indexOf("@") != -1) {
+    let [_, domain] = email.split("@");
+    if (domain !== "example.com") {
+      return {
+        emailDomain: {
+          parsedDomain: domain
+        }
+      }
+    }
+  }
+  return null;
+}
 
 @Component({
   selector: 'app-register',
@@ -31,18 +84,19 @@ export class RegisterComponent implements OnInit {
 
   hidealert() {
     this.show=false;
+    this.router.navigate(['login']);
   }
 
   ngOnInit() {
 
     this.registerForm = this._fb.group({
 
-      mailid: ['', [Validators.required , Validators.minLength(1)]],
-      password: ['', [Validators.required , Validators.minLength(1)]],
-      firstname: ['', [Validators.required , Validators.minLength(1)]],
-      lastname: ['', [Validators.required, Validators.minLength(1)]],
+      mailid: ['', [Validators.required , Validators.email,Validators.pattern("[^ @]*@[^ @]*"),emailDomainValidator]],
+      password: ['', [Validators.required , Validators.minLength(6),passMinLength]],
+      firstname: ['', [Validators.required , Validators.minLength(4),firstNameMinLength]],
+      lastname: ['', [Validators.required, Validators.minLength(4),lastNameMinLength]],
       location: ['', [Validators.required, Validators.minLength(1)]],
-      mobile: ['', [Validators.required, Validators.minLength(1)]],
+      mobile: ['', [Validators.required, phoneNumberValidator]],
   });
   }
 

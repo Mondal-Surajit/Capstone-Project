@@ -8,7 +8,7 @@
                        <div class="col-sm-6">
                           <div class="form-group">
                                 <label>Product Name</label>
-                                <input type="text" formControlName="name" class="form-control" [(ngModel)]="editProd.name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                                <input type="text" formControlName="name" class="form-control" [(ngModel)]="editProd.name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" placeholer="Enter Product Name" />
                                 <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
                                       <div *ngIf="f.name.errors.required"> Name Field is required</div>
                                 </div>
@@ -21,7 +21,7 @@
                       <div class="col-sm-6">
                           <div class="form-group">
                                 <label>Product description</label>
-                                <input type="text" formControlName="desc" class="form-control" [(ngModel)]="editProd.description" [ngClass]="{ 'is-invalid': submitted && f.desc.errors }" />
+                                <input type="text" formControlName="desc" class="form-control" [(ngModel)]="editProd.description" [ngClass]="{ 'is-invalid': submitted && f.desc.errors }" placeholer="Enter Product Description" />
                                 <div *ngIf="submitted && f.desc.errors" class="invalid-feedback">
                                       <div *ngIf="f.desc.errors.required">Description Field is required</div>
                                 </div>
@@ -34,7 +34,7 @@
                        <div class="col-sm-6">
                           <div class="form-group">
                                 <label>Manufacturer</label>
-                                <input type="text" formControlName="manuf" class="form-control" [(ngModel)]="editProd.manufacturer" [ngClass]="{ 'is-invalid': submitted && f.manuf.errors }" />
+                                <input type="text" formControlName="manuf" class="form-control" [(ngModel)]="editProd.manufacturer" [ngClass]="{ 'is-invalid': submitted && f.manuf.errors }" placeholer="Enter Product Manufacturer" />
                                 <div *ngIf="submitted && f.manuf.errors" class="invalid-feedback">
                                       <div *ngIf="f.manuf.errors.required">Manufacturer Field is required</div>
                                 </div> 
@@ -47,7 +47,7 @@
                       <div class="col-sm-6">
                           <div class="form-group">
                                 <label>Price</label>
-                                <input type="number" formControlName="price" class="form-control" [(ngModel)]="editProd.price" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                                <input type="number" formControlName="price" class="form-control" [(ngModel)]="editProd.price" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" placeholer="Enter Product Price" />
                                 <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
                                       <div *ngIf="f.price.errors.required">Price Field is required</div>
                                 </div>
@@ -57,7 +57,7 @@
                        <div class="col-sm-6">
                           <div class="form-group">
                                 <label>Quantity</label>
-                                <input type="number" formControlName="qty" class="form-control" [(ngModel)]="editProd.qty" [ngClass]="{ 'is-invalid': submitted && f.qty.errors }" />
+                                <input type="number" formControlName="qty" class="form-control" [(ngModel)]="editProd.qty" [ngClass]="{ 'is-invalid': submitted && f.qty.errors }" placeholer="Enter Product Quantity" />
                                 <div *ngIf="submitted && f.qty.errors" class="invalid-feedback">
                                       <div *ngIf="f.qty.errors.required">Quantity Field is required</div>
                                 </div>

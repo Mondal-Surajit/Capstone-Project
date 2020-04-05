@@ -9,7 +9,7 @@
      
 
       <div class="col-md-3">
-            <a class =" btn btn-primary text-white btn-primary" routerLink="add">Add New Product</a>
+            <a class =" btn btn-primary text-white btn-primary" name="add" routerLink="add">Add New Product</a>
           </div>
           <div  class="col-md-3">
          <app-product-delete
@@ -45,7 +45,7 @@
           <th *ngIf="pmanu" class="pmanu">Manufacturer</th>
           <th *ngIf="pprice" class="pprice">Price</th>
           <th *ngIf="pqty" class="pqty">Quantity</th>
-          <th>EDIT PRODUCT</th>
+          <th>Edit Product</th>
           <th>View Detail</th>
           <th>Select to Delete</th>
           
@@ -59,9 +59,9 @@
       <td *ngIf="pmanu" class="manu">{{product.manufacturer}}</td>
       <td *ngIf="pprice" class="price">{{product.price}}</td>
       <td *ngIf="pqty" class="qty">{{product.qty}}</td> 
-      <td><button type="button" class="btn btn-warning" [routerLink]="['edit/' + product.id]" >Edit</button></td>
-      <td><a class ="btn btn-sm text-white btn-primary" [routerLink]="[product.id]">View Detail</a></td>
-      <td><input type="checkbox" class="form-check-input circle"  (change)='addId(product.id)' ></td>
+      <td><button type="button" class="btn btn-warning" name="edit" [routerLink]="['edit/' + product.id]" >Edit</button></td>
+      <td><a class ="btn btn-sm text-white btn-primary" name="detail" [routerLink]="[product.id]">View Detail</a></td>
+      <td><input type="checkbox" name="chkbox" class="form-check-input circle"  (change)='addId(product.id)' ></td>
     </tr> 
   </tbody>
 </table>

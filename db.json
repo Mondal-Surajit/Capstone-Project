@@ -2,97 +2,115 @@
   "products": [
     {
       "id": "843cccd1-c007-4d6b-934d-f36225375674",
-      "name": "asasasasa",
-      "description": "asasasasasasa",
-      "manufacturer": "sasasasa",
-      "price": 1212121,
+      "name": "Redmi Note 7 Pro",
+      "description": "It's a awesome phone",
+      "manufacturer": "Xiomi",
+      "price": 15000,
       "qty": 12
     },
     {
       "id": "b6d092b5-d693-4027-8a04-bfa01a52e150",
-      "name": "dsdsfsf",
-      "description": "sfsfsfsfsfsfsfsfsfsf",
-      "manufacturer": "sfsfsfsfsf",
-      "price": 121212,
-      "qty": 212
+      "name": "One Plus 7",
+      "description": "Nice phone to use",
+      "manufacturer": "One Plus co",
+      "price": 35000,
+      "qty": 15
     },
     {
       "id": "67afee0b-e7fb-4fb4-b025-769db48123e7",
-      "name": "dasaad",
-      "description": "dasaaddasaad",
-      "manufacturer": "dasaad",
-      "price": 2313232,
-      "qty": 232
+      "name": "HP Laptop",
+      "description": "It's a branded laptop",
+      "manufacturer": "Hewlett Packard",
+      "price": 40000,
+      "qty": 25
     },
     {
       "id": "ab0b369a-5f4d-48ae-8448-f8bafeab3511",
-      "name": "sasasa",
-      "description": "adadadadada",
-      "manufacturer": "dadadad",
-      "price": 1212121,
-      "qty": 2121
+      "name": "Lenovo Laptop",
+      "description": "Thinkpad Laptop",
+      "manufacturer": "Lenovo",
+      "price": 30000,
+      "qty": 8
     },
     {
       "id": "45f7f945-88c2-44b2-ab06-c0e8c113843c",
-      "name": "wewewewe",
-      "description": "e2e2ewewewew",
-      "manufacturer": "ewewewe",
-      "price": 1212121,
-      "qty": 1212
+      "name": "Pencil",
+      "description": "It's used for writing",
+      "manufacturer": "Nataraj",
+      "price": 10,
+      "qty": 95
     },
     {
       "id": "4614cd4c-3850-40be-9829-87371d084607",
-      "name": "wewewew",
-      "description": "dsdsdsdwdwwewew",
-      "manufacturer": "ewewewew",
-      "price": 11212,
-      "qty": 21
+      "name": "TP-Link",
+      "description": "Good quality routers",
+      "manufacturer": "TpLink",
+      "price": 1000,
+      "qty": 35
     },
     {
       "id": "bddcc220-aeef-49c2-b26f-0bb20db87a95",
-      "name": "wewewe",
-      "description": "wewewewewewe",
-      "manufacturer": "wewewew",
-      "price": 32323,
-      "qty": 32
+      "name": "Eraser",
+      "description": "It's used for erasing purpose",
+      "manufacturer": "Apsara",
+      "price": 50,
+      "qty": 100
     },
     {
       "id": "f0486704-44e5-4242-8701-9ab88ae9edbc",
-      "name": "dsdd",
-      "description": "dsdsdsdsds",
-      "manufacturer": "sdsdsd",
-      "price": 2321212,
-      "qty": 1212
+      "name": "Plantronics",
+      "description": "Good quality headphone",
+      "manufacturer": "Plantronics company",
+      "price": 4500,
+      "qty": 65
     },
     {
       "id": "b8c3842d-48df-479c-bdd2-990ccadb2f40",
-      "name": "sasasasa",
-      "description": "sasasasasasasasa",
-      "manufacturer": "sasasasa",
-      "price": 1212,
-      "qty": 12
-    },
-    {
-      "id": "5ac64d0c-bb11-42be-bc7a-68ccfc2c5ad2",
-      "name": "aaaa",
-      "description": "bbbbbbbbbb",
-      "manufacturer": "ccccccccc",
-      "price": 78,
-      "qty": 87
+      "name": "IPhone",
+      "description": "It's a branded phone",
+      "manufacturer": "Apple INC",
+      "price": 70000,
+      "qty": 5
     }
   ],
   "users": [
+    
+    
     {
-      "name": "typicode"
+      "id": "d5582a1b-c757-4aad-8b15-08ed4d133450",
+      "mailid": "sura123@example.com",
+      "password": "surajit",
+      "firstname": "Surajit",
+      "lastname": "Mondal",
+      "location": "Kolkata",
+      "mobile": "0123456789"
     },
     {
-      "id": "3d70402e-80da-4312-8734-09624d813c6f",
-      "mailid": "md",
-      "password": "md",
-      "firstname": "md",
-      "lastname": "md",
-      "location": "md",
-      "mobile": 91232122
+      "id": "7f0a5350-da5b-4910-907d-b08fae9c1d41",
+      "mailid": "su@example.com",
+      "password": "surajittttt",
+      "firstname": "surait",
+      "lastname": "mondal",
+      "location": "calcutta",
+      "mobile": "012455355355"
+    },
+    {
+      "id": "d435e9ab-464a-43fb-8d01-33af29a5ed66",
+      "mailid": "Su@example.com",
+      "password": "surajit",
+      "firstname": "surajit",
+      "lastname": "mondal",
+      "location": "Kolkata",
+      "mobile": "0123456789"
+    },
+    {
+      "id": "8eea9320-c6da-44b2-b045-f0c51fd21f10",
+      "mailid": "Sura@example.com",
+      "password": "surajit",
+      "firstname": "surajit",
+      "lastname": "mondal",
+      "location": "Mumbai",
+      "mobile": "9888877777"
     }
   ]
 }

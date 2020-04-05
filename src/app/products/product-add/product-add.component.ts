@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { IProduct } from '../product.model';
-import { FormBuilder, FormGroup, Validators, NgForm, AbstractControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import * as uuid from 'uuid';
 import { Router } from '@angular/router';
 

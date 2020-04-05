@@ -7,46 +7,69 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="mailid">Email ID</label>
-        <input type="email" formControlName="mailid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mailid.errors }" />
+        <input type="email" formControlName="mailid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mailid.errors }" placeholder="username@example.com"  />
         <div *ngIf="submitted && f.mailid.errors" class="invalid-feedback">
             <div *ngIf="f.mailid.errors.required">Mail ID is required</div>
         </div>
+        <div *ngIf="f.mailid.errors?.pattern" style="color:red" >The email address must contain @ character</div>
+        <div *ngIf="f.mailid.errors?.email" style="color:red">Invalid Email Address </div>
+            <div *ngIf="f.mailid.errors?.emailDomain" style="color:red">Email must be on the example.com domain </div>
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Set a password" />
         <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
             <div *ngIf="f.password.errors.required">Password is required</div>
             <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
         </div>
+        <div *ngIf="f.password.errors?.minlength" style="color:red">
+            Password must be at least 6 characters long.
+           </div>
+
     </div>
     <div class="form-group">
     <label for="firstname">First Name</label>
-        <input type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" />
+        <input type="text" formControlName="firstname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstname.errors }" placeholder="Enter your First Name" />
         <div *ngIf="submitted && f.firstname.errors" class="invalid-feedback">
             <div *ngIf="f.firstname.errors.required">First Name is required</div>
         </div>
+        <div *ngIf="f.firstname.errors?.minlength" style="color:red">
+            First Name must be at least 4 characters long.
+           </div>
     </div>
     <div class="form-group">
         <label for="lastname">Last Name</label>
-        <input type="text" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastname.errors }" />
+        <input type="text" formControlName="lastname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastname.errors } " placeholder="Enter your Last Name" />
         <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
-            <div *ngIf="f.lastname.errors.required">Last Name is required</div>
+            <div *ngIf="f.lastname.errors.required">Last Name is required</div> 
         </div>
+        <div *ngIf="f.lastname.errors?.minlength" style="color:red">
+            First Name must be at least 4 characters long.
+           </div>
     </div>
     <div class="form-group">
         <label for="location">Location</label>
-        <input type="text" formControlName="location" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.location.errors }" />
+        <input type="text" formControlName="location" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.location.errors }"  placeholder="Enter your Location" />
         <div *ngIf="submitted && f.location.errors" class="invalid-feedback">
             <div *ngIf="f.location.errors.required">Location is required</div>
         </div>
+        
     </div>
+    
     <div class="form-group">
         <label for="mobile">Mobile</label>
-        <input type="number" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+        <input placeholder="Mobile Number" type="tel" minlength="10" maxlength="14" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
         <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
             <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
         </div>
+        <div *ngIf="submitted && f.mobile.invalid && f.mobile.errors.invalidNumber" style="color: red">
+            Value has to be a number.
+        </div>
+
+        <div *ngIf="f.mobile.errors?.minlength" style="color:red">
+            Mobile number must be at least 10 digits long.
+           </div>
+         
     </div>
 
     <div class="form-group">

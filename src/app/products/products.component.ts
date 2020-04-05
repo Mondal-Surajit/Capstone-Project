@@ -1,11 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductsService } from './products.service';
 import {IProduct} from './product.model'
-import { FormBuilder, FormGroup, Validators, NgForm, FormControl } from '@angular/forms';
-import * as uuid from 'uuid';
-
 import {ProductDeleteComponent} from './product-delete/product-delete.component'
-import { Router } from '@angular/router';
 
 
  
@@ -20,7 +16,6 @@ export class ProductsComponent implements OnInit {
   title: string = 'Product List';
   nameFilter: string = '';
   products: IProduct[];
-  myForm: FormGroup;
    id:string[]=[];
   i:number=0;
   show : boolean=true;
@@ -38,8 +33,7 @@ export class ProductsComponent implements OnInit {
     this.child.selected = this.selected;
   }
 
-  constructor( private fb: FormBuilder,private productsService: ProductsService, private _fb: FormBuilder,
-    private router : Router) { 
+  constructor( private productsService: ProductsService) { 
     
   }
 

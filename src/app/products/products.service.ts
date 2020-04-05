@@ -7,14 +7,14 @@ import { map } from 'rxjs/operators';
 
  
 export interface Count {
-  id: number;
+  id: string;
   name:string;
   counter:number;
 }
 
 @Injectable()
 export class ProductsService {
-  private url = "http://localhost:3000/products";
+   url = "http://localhost:3000/products";
     private httpOptions = {
         headers: new HttpHeaders({
           'Content-Type':  'application/json'
