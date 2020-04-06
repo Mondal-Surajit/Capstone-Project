@@ -1,12 +1,77 @@
-<nav>
-  <a style="padding-right:20px" routerLink="" routerLinkActive="active"  >About</a>
-  <a style="padding-right:20px" routerLink="products" routerLinkActive="active">Products Inventory</a>
-  <a routerLink="products/charts" routerLinkActive="active">Top Chart</a>
-  <a style="padding-left:20px" *ngIf="!isLoggedIn()" style="float:right" routerLink="login" routerLinkActive="active">Login</a>
-  <a *ngIf="isLoggedIn()" style="float:right" routerLink="logout"  (click)="changeToLoginRoute()">Logout</a>
-  <a *ngIf="isLoggedIn()" style="padding-left:20px" routerLink="profile"  >Profile</a>  
- 
+<body>
+
+<nav class="navbar navbar-expand-lg bg-info text-white fixed-top" id="mainNav">
+
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger text-white" style="font-size: 30px ; margin:5px" href="#page-top">Capstone</a>
+    
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" style="padding-right:20px" routerLink="" routerLinkActive="active"  >About</a></button>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" style="padding-right:20px" routerLink="products" routerLinkActive="active">Products Inventory</a></button>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" routerLink="products/charts" routerLinkActive="active">Top Chart</a></button>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active" *ngIf="isLoggedIn()">
+          <a  class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" *ngIf="isLoggedIn()" style="padding-left:20px" routerLink="profile"  >Profile</a></button>
+        </li>
+
+        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active" *ngIf="!isLoggedIn()">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" style="padding-left:20px" *ngIf="!isLoggedIn()" style="float:right" routerLink="login" routerLinkActive="active">Login</a></button>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active" *ngIf="isLoggedIn()">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red"  *ngIf="isLoggedIn()" style="float:right" routerLink="logout"  (click)="changeToLoginRoute()">Logout</a></button>
+        </li> 
+        
+      </ul>
+    </div>
+  
+  </div>
 </nav>
+    
 <router-outlet></router-outlet>
+
+
+</body>
+
+
+<nav class="navbar navbar-expand-lg bg-info text-white  fixed-bottom" id="mainNav">
+  <div class="container">
+<a class="navbar-brand js-scroll-trigger text-white" href="#page-top">&copy; Capstone Project Theme. All Rights Reserved. <br> Designed by BootstrapMade</a>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
+    <i class="fab fa-facebook fa-2x fa-fw"></i>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
+    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+        </li>
+        <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
+     <i class="fab fa-instagram fa-2x fa-fw"></i>
+        </li>
+    <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
+    <i class="fab fa-pinterest fa-2x fa-fw"></i>
+        </li>
+    <li class="nav-item mx-0 mx-lg-1">
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
+    <i class="fab fa-google-plus fa-2x fa-fw"></i>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+
+
 
 

@@ -1,0 +1,48 @@
+
+ */body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}
+ h1,h2,h3,h4,h5,h6{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
+ 
+ #mainNav {
+	width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+	padding: 0;
+	background-color: #00FFFF;
+	border-bottom: 1px solid #ccc;  
+	}
+
+#nav ul {
+	list-style: none;
+	width: 800px;
+	margin: 0 auto;
+	padding: 0; }
+#nav li {
+	float: left; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li:first-child a {
+	border-left: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+.btn-default:focus, .btn-default.active {
+    color: white;
+    background-color: yellow;
+    border-color: #0000A0;
+}
+#buttons{
+	background-color: white;
+  border-color: black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width:50%;  
+}

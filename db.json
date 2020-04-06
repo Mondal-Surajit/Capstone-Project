@@ -74,8 +74,6 @@
     }
   ],
   "users": [
-    
-    
     {
       "id": "d5582a1b-c757-4aad-8b15-08ed4d133450",
       "mailid": "sura123@example.com",
@@ -111,6 +109,15 @@
       "lastname": "mondal",
       "location": "Mumbai",
       "mobile": "9888877777"
+    },
+    {
+      "id": "0b4c1a98-ba00-4dbb-98a1-487458187f66",
+      "mailid": "Aadil@example.com",
+      "password": "Aadilh",
+      "firstname": "Aadil",
+      "lastname": "Hussain",
+      "location": "Kolkata",
+      "mobile": "0987635568"
     }
   ]
 }
