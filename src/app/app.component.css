@@ -1,5 +1,4 @@
-
- */body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}
+/* body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}
  h1,h2,h3,h4,h5,h6{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
  
  #mainNav {
@@ -7,7 +6,7 @@
 	float: left;
 	margin: 0 0 1em 0;
 	padding: 0;
-	background-color: #00FFFF;
+	background-color: rgb(4, 252, 252);
 	border-bottom: 1px solid #ccc;  
 	}
 
@@ -32,7 +31,7 @@
 	background-color: #fff; }
 .btn-default:focus, .btn-default.active {
     color: white;
-    background-color: yellow;
+    background-color: rgb(241, 241, 46);
     border-color: #0000A0;
 }
 #buttons{
@@ -45,4 +44,30 @@
   display: inline-block;
   font-size: 16px;
   width:50%;  
-}
+} */
+
+/* .carousel-inner img {
+        width: 100%;
+        height: 200%;
+    } */
+    .bg-dark {
+    background-color: #04a598!important;
+    }
+    .container{
+        margin:0 auto;
+        text-align: center;
+    }
+    
+
+
+/* .carousel{
+  
+  max-height: 700px !important;
+  max-width:500px !important;
+  
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+
+} */

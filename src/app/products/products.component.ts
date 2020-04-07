@@ -88,7 +88,7 @@ qty() {this.pqty? this.pqty=false:this.pqty=true}
       
   
         this.productsService.removeProduct(this.id);
-        this.getData();
+        this.productsService.getProducts().subscribe((data:any[]) => this.getData())
 
         if(this.id.length==1)
         alert('Selected prodcut is deleted!');

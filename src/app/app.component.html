@@ -1,77 +1,56 @@
 <body>
 
-<nav class="navbar navbar-expand-lg bg-info text-white fixed-top" id="mainNav">
-
-  <div class="container">
-    <a class="navbar-brand js-scroll-trigger text-white" style="font-size: 30px ; margin:5px" href="#page-top">Capstone</a>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">Capstone Project</a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button></div>
     
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" style="padding-right:20px" routerLink="" routerLinkActive="active"  >About</a></button>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" style="padding-right:20px" routerLink="products" routerLinkActive="active">Products Inventory</a></button>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" routerLink="products/charts" routerLinkActive="active">Top Chart</a></button>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active" *ngIf="isLoggedIn()">
-          <a  class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" *ngIf="isLoggedIn()" style="padding-left:20px" routerLink="profile"  >Profile</a></button>
-        </li>
-
-        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active" *ngIf="!isLoggedIn()">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red" style="padding-left:20px" *ngIf="!isLoggedIn()" style="float:right" routerLink="login" routerLinkActive="active">Login</a></button>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1"><button type="button" class="btn btn-default active" *ngIf="isLoggedIn()">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-red"  *ngIf="isLoggedIn()" style="float:right" routerLink="logout"  (click)="changeToLoginRoute()">Logout</a></button>
-        </li> 
+    <div class="collapse navbar-collapse " id="collapsibleNavbar">
         
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="" routerLinkActive="active" style="padding-left:10px" [routerLinkActiveOptions]="{exact:true}" >About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"  routerLink="products" routerLinkActive="active" style="padding-left:10px" [routerLinkActiveOptions]="{exact:true}" >Products Inventory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="products/charts" routerLinkActive="active" style="padding-left:10px" [routerLinkActiveOptions]="{exact:true}" >Top Chart</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="isLoggedIn()" style="padding-left:10px" routerLink="profile" routerLinkActive="active" >Profile</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf="!isLoggedIn()" style="padding-left:10px" routerLink="login" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >Login</a>
+        </li>    
+  <li class="nav-item">
+          <a class="nav-link"  style="padding-left:10px" *ngIf="isLoggedIn()"  routerLink="logout"  (click)="changeToLoginRoute()"  routerLinkActive="active" >Logout</a>
+        </li>   
       </ul>
-    </div>
-  
-  </div>
-</nav>
+    </div>  
+
+</div>
+  </nav> 
+
     
 <router-outlet></router-outlet>
 
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+         
+  <a class="navbar-brand" href="#">&copy; Capstone Project Themes. All Rights Reserved </a>
+ 
+
+  
+
+</nav>
+
+
+  
 
 </body>
-
-
-<nav class="navbar navbar-expand-lg bg-info text-white  fixed-bottom" id="mainNav">
-  <div class="container">
-<a class="navbar-brand js-scroll-trigger text-white" href="#page-top">&copy; Capstone Project Theme. All Rights Reserved. <br> Designed by BootstrapMade</a>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
-    <i class="fab fa-facebook fa-2x fa-fw"></i>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
-    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-        </li>
-        <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
-     <i class="fab fa-instagram fa-2x fa-fw"></i>
-        </li>
-    <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
-    <i class="fab fa-pinterest fa-2x fa-fw"></i>
-        </li>
-    <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-white" href="#"></a>
-    <i class="fab fa-google-plus fa-2x fa-fw"></i>
-        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    
-      </ul>
-    </div>
-    </div>
-  </nav>
-
-
-
 
 
 
