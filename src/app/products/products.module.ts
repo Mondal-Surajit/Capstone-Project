@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; // Reactive Forms
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ProductsService} from './products.service'
-import { AddProductGuardService } from './product-add/addemployee-guard.service';
+import { AddProductGuardService } from './product-add/addproduct-guard.service';
 import { ProductGaurdService } from './product-gaurd.service';
 import {ProductEditComponent} from './product-edit/product-edit.component'
 import { ProductDeleteComponent} from './product-delete/product-delete.component';

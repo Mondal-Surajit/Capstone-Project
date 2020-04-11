@@ -50,18 +50,18 @@ describe('ProductService', () => {
        ] as IProduct[];
     });
 
-    it('should return expected employees (called once)', () => {
+    it('should return expected products (called once)', () => {
 
         prodService.getProducts().subscribe(
-        employees => expect(employees).toEqual(expectedProducts, 'should return expected employees'),
+          products => expect(products).toEqual(expectedProducts, 'should return expected products'),
         fail
       );
 
-      // EmployeesService should have made one request to GET employees from expected URL
+      // EmployeesService should have made one request to GET products from expected URL
       const req = httpTestingController.expectOne(prodService.url);
       expect(req.request.method).toEqual('GET');
 
-      // Respond with the mock employees
+      // Respond with the mock products
       req.flush(expectedProducts);
     });
   });
@@ -77,7 +77,7 @@ describe('ProductService', () => {
         qty: 18
       };
 
-    it('should add an employee and return with id inserted ', () => {
+    it('should add an product and return with id inserted ', () => {
 
       const productToAdd: IProduct = {
         id: "b6d092b5-d693-4027-8a04-bfa01a52e150",
@@ -98,7 +98,7 @@ describe('ProductService', () => {
       expect(req.request.method).toEqual('POST');
       expect(req.request.body).toEqual(productToAdd);
 
-      // Expect server to return the employee after POST
+      // Expect server to return the product after POST
       const expectedResponse = new HttpResponse(
         { status: 200, statusText: 'OK', body: expectedAddProduct });
       req.event(expectedResponse);

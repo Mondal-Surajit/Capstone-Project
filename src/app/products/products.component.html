@@ -23,8 +23,8 @@
       <div *ngIf="!show" id="grpChkBox" class="card" style="width: 20rem;">
         <div class="card-header bg-dark text-white">Select the column you want to hide</div>
         <div class="card-body">
-        <!--<p><input type="checkbox" name="prdid" /> Product ID</p>-->
-        <p><input type="checkbox" name="pname" (change)="name()" class="card-text"  /> Product Name</p>
+
+          <p><input type="checkbox" name="pname" (change)="name()" class="card-text"  /> Product Name</p>
         <p><input type="checkbox" name="pdesc" (change)="desc()" class="card-text"/> Description</p> 
         <p><input type="checkbox" name="pmanu" (change)="manu()" class="card-text" /> Manufacturer</p>
         <p><input type="checkbox" name="pprice" (change)="price()" class="card-text"/> Price</p>
@@ -34,39 +34,61 @@
     </div>
  
       <br><br><br>
- 
-<div class="table-responsive">
-  <table id="someTable" [border]="5"  class='table table-striped'>
-  <thead>
-      <tr>
-          <!--<th class="prdid">Product ID</th>-->
-          <th *ngIf="pname" class="pname">Product Name</th>
-          <th *ngIf="pdesc" class="pdesc">Description</th>
-          <th *ngIf="pmanu" class="pmanu">Manufacturer</th>
-          <th *ngIf="pprice" class="pprice">Price</th>
-          <th *ngIf="pqty" class="pqty">Quantity</th>
-          <th>Edit Product</th>
-          <th>View Detail</th>
-          <th>Select to Delete</th>
-          
-      </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor='let product of products | searchFilter: nameFilter' >
-      <!--<td class="prdid">{{product.id}}</td>-->
-      <td *ngIf="pname" class="pname">{{product.name}}</td>
-      <td *ngIf="pdesc" class="desc">{{product.description}}</td>
-      <td *ngIf="pmanu" class="manu">{{product.manufacturer}}</td>
-      <td *ngIf="pprice" class="price">{{product.price}}</td>
-      <td *ngIf="pqty" class="qty">{{product.qty}}</td> 
-      <td><button type="button" class="btn btn-warning" name="edit" [routerLink]="['edit/' + product.id]" >Edit</button></td>
-      <td><a class ="btn btn-sm text-white btn-primary" name="detail" [routerLink]="[product.id]">View Detail</a></td>
-      <td><input type="checkbox" name="chkbox" class="form-check-input circle"  (change)='addId(product.id)' ></td>
-    </tr> 
-  </tbody>
-</table>
 
-</div>
+
+  <div class="card bg-light mb-3 border-primary " style="margin:2em; font-style: normal;" *ngFor='let product of products | searchFilter: nameFilter'>
+    <div class="card-body text-secondary" >
+      <div class="row align-items-start">
+      
+        <div class="col-sm-2">
+        <input type="checkbox" name="chkbox" class="form-check-input circle"  (change)='addId(product.id)' > <br>
+      </div>
+      
+        <div class="col-sm-6">
+          
+          <div *ngIf="pname" class="row header" >
+            <h3 class="card-title ">{{ product.name }}</h3>
+          </div>
+          
+          <div *ngIf="pdesc" class="row " style="margin-top: 5px">
+            <p class="card-text container">
+              <b>Product Description : </b>{{product.description}}<br>
+            </p>
+          </div>
+          <div *ngIf="pmanu" class="row " style="margin-top: 5px">
+            <p class="card-text container">
+              <b> Product Manufacturer : </b>{{product.manufacturer}}<br>
+            </p>
+          </div>
+          <div *ngIf="pprice" class="row ">
+            <p class="card-text container" style="margin-top: 5px">
+              <b> Product Price : </b> {{product.price}}<br>
+            </p>
+          </div>
+          <div *ngIf="pqty" class="row ">
+            <p class="card-text container" style="margin-top: 5px">
+              <b>Product Quantity : </b>{{product.qty}}<br> 
+            </p>
+          </div>
+          
+  
+        </div>
+  
+
+        <div class="col-sm-4">
+          <br><br>
+          <div class="row container">
+           <button type="button" class="btn btn-warning" name="edit" [routerLink]="['edit/' + product.id]" >Edit</button><br>
+          </div>
+          <br>
+          <div class="row container">
+            <a class ="btn btn-sm text-white btn-primary" name="detail" [routerLink]="[product.id]">View Detail</a> <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <br> <br>
 </div>
 

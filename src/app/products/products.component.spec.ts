@@ -70,30 +70,30 @@ describe('ProductsComponent', () => {
       expect(comp.show).toBe(true, 'Do Not Display checkbox to customize view');
     })
 
-    it('should hide table column Name based on checkbox selection', () => {
-      expect(comp.pname).toBe(true, 'shows Name Column in the Table');
+    it('should hide field Name based on checkbox selection', () => {
+      expect(comp.pname).toBe(true, 'shows Name in Card');
       comp.name();
-      expect(comp.pname).toBe(false, 'hide Name Column in the Table');
+      expect(comp.pname).toBe(false, 'hide Name in Card');
     })
-    it('should hide table column Description based on checkbox selection', () => {
-      expect(comp.pdesc).toBe(true, 'shows Description Column in the Table');
+    it('should hide field Description based on checkbox selection', () => {
+      expect(comp.pdesc).toBe(true, 'shows Description in Card');
       comp.desc();
-      expect(comp.pdesc).toBe(false, 'hide Description Column in the Table');
+      expect(comp.pdesc).toBe(false, 'hide Description in Card');
     })
-    it('should hide table column Manufacturer based on checkbox selection', () => {
-      expect(comp.pmanu).toBe(true, 'shows Manufacturer Column in the Table');
+    it('should hide field Manufacturer based on checkbox selection', () => {
+      expect(comp.pmanu).toBe(true, 'shows Manufacturer in Card');
       comp.manu();
-      expect(comp.pmanu).toBe(false, 'hide Manufacturer Column in the Table');
+      expect(comp.pmanu).toBe(false, 'hide Manufacturer in Card');
     })
-    it('should hide table column Price based on checkbox selection', () => {
-      expect(comp.pprice).toBe(true, 'shows Price Column in the Table');
+    it('should hide field Price based on checkbox selection', () => {
+      expect(comp.pprice).toBe(true, 'shows Price in Card');
       comp.price();
-      expect(comp.pprice).toBe(false, 'hide Price Column in the Table');
+      expect(comp.pprice).toBe(false, 'hide Price in Card');
     })
-    it('should hide table column Quantity based on checkbox selection', () => {
-      expect(comp.pqty).toBe(true, 'shows Quantity Column in the Table');
+    it('should hide field Quantity based on checkbox selection', () => {
+      expect(comp.pqty).toBe(true, 'shows Quantity in Card');
       comp.qty();
-      expect(comp.pqty).toBe(false, 'hide Quantity Column in the Table');
+      expect(comp.pqty).toBe(false, 'hide Quantity in Card');
     })
   });
 
@@ -143,80 +143,24 @@ describe('ProductsComponent', () => {
       expect(compiled.querySelector('a[name="add"]')).toBeTruthy();
     });
 
-    it(`should render a table heading Product Name`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelector('th').textContent).toEqual("Product Name");
-    });
-
-    it(`should render a table heading Description`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelectorAll('th')[1].textContent).toEqual('Description');
-    });
-
-    it(`should render a table heading Manufacturer`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelectorAll('th')[2].textContent).toEqual('Manufacturer');
-    });
-
-    it(`should render a table heading Price`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelectorAll('th')[3].textContent).toEqual('Price');
-    });
-
-    it(`should render a table heading Quantity`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelectorAll('th')[4].textContent).toEqual('Quantity');
-    });
-    it(`should render a table heading Edit Product`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelectorAll('th')[5].textContent).toEqual('Edit Product');
-    });
-
-    it(`should render a table heading View Detail`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelectorAll('th')[6].textContent).toEqual('View Detail');
-    });
-
-    it(`should render a table heading Select to Delete`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelectorAll('th')[7].textContent).toEqual('Select to Delete');
-    });
+   
 
     it(`should a tag in Edit Product Button`, () => {
       const compiled = fixture.nativeElement;
-      expect(compiled.querySelector('tbody').querySelectorAll('tr')[0].
-      querySelectorAll('td')[5].querySelector('button[name="edit"]')).toBeTruthy();
+      expect(compiled.querySelector('button[name="edit"]')).toBeTruthy();
     });
 
     it(`should a tag in View Product Achor tag`, () => {
       const compiled = fixture.nativeElement;
-      expect(compiled.querySelector('tbody').querySelectorAll('tr')[0].
-      querySelectorAll('td')[6].querySelector('a[name="detail"]')).toBeTruthy();
+      expect(compiled.querySelector('a[name="detail"]')).toBeTruthy();
     });
 
     it(`should a tag in Edit Product Column`, () => {
       const compiled = fixture.nativeElement;
-      expect(compiled.querySelector('tbody').querySelectorAll('tr')[0].
-      querySelectorAll('td')[7].querySelector('input[type="checkbox"]')).toBeTruthy();
+      expect(compiled.querySelector('input[type="checkbox"]')).toBeTruthy();
     });
 
-    it(`should render 2 rows of data`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelector('tbody').querySelectorAll('tr').length).toEqual(2);
-    })
-
-    it(`should render first Product Name as Samsung Galaxy S10`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelector('tbody').querySelectorAll('tr')[0].
-              querySelectorAll('td')[0].textContent).toEqual('Samsung Galaxy S10');
-    })
-
-    it(`should render second Product Name as Moto G5`, () => {
-      const compiled = fixture.nativeElement;
-      expect(compiled.querySelector('tbody').querySelectorAll('tr')[1].
-              querySelectorAll('td')[0].textContent).toEqual('Moto G5');
-    })
-  
+    
   });
 });
 
